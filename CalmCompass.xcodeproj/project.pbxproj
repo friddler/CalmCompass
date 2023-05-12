@@ -14,6 +14,16 @@
 		0E7D7AD72A0BADF0007C7F33 /* CalmCompassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7D7AD62A0BADF0007C7F33 /* CalmCompassTests.swift */; };
 		0E7D7AE12A0BADF0007C7F33 /* CalmCompassUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7D7AE02A0BADF0007C7F33 /* CalmCompassUITests.swift */; };
 		0E7D7AE32A0BADF0007C7F33 /* CalmCompassUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7D7AE22A0BADF0007C7F33 /* CalmCompassUITestsLaunchTests.swift */; };
+		0E7D7AF82A0D5650007C7F33 /* GoogleService-Info-3.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E7D7AF72A0D5650007C7F33 /* GoogleService-Info-3.plist */; };
+		0E7D7AFB2A0D57B0007C7F33 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0E7D7AFA2A0D57B0007C7F33 /* FirebaseAnalyticsSwift */; };
+		0E7D7AFD2A0D57B0007C7F33 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0E7D7AFC2A0D57B0007C7F33 /* FirebaseAuth */; };
+		0E7D7AFF2A0D57B0007C7F33 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 0E7D7AFE2A0D57B0007C7F33 /* FirebaseFirestore */; };
+		0E7D7B012A0D57B0007C7F33 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0E7D7B002A0D57B0007C7F33 /* FirebaseFirestoreSwift */; };
+		0E7D7B032A0D57B0007C7F33 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 0E7D7B022A0D57B0007C7F33 /* FirebaseStorage */; };
+		0E7D7B072A0D59E9007C7F33 /* FirestoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7D7B062A0D59E9007C7F33 /* FirestoreViewModel.swift */; };
+		0E7D7B092A0D5A09007C7F33 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7D7B082A0D5A09007C7F33 /* AuthViewModel.swift */; };
+		0E7D7B0C2A0D5BD3007C7F33 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7D7B0B2A0D5BD3007C7F33 /* LottieView.swift */; };
+		0E7D7B0F2A0D5BF1007C7F33 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 0E7D7B0E2A0D5BF1007C7F33 /* Lottie */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +54,10 @@
 		0E7D7ADC2A0BADF0007C7F33 /* CalmCompassUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalmCompassUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E7D7AE02A0BADF0007C7F33 /* CalmCompassUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalmCompassUITests.swift; sourceTree = "<group>"; };
 		0E7D7AE22A0BADF0007C7F33 /* CalmCompassUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalmCompassUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0E7D7AF72A0D5650007C7F33 /* GoogleService-Info-3.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-3.plist"; sourceTree = "<group>"; };
+		0E7D7B062A0D59E9007C7F33 /* FirestoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreViewModel.swift; sourceTree = "<group>"; };
+		0E7D7B082A0D5A09007C7F33 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		0E7D7B0B2A0D5BD3007C7F33 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +65,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E7D7AFB2A0D57B0007C7F33 /* FirebaseAnalyticsSwift in Frameworks */,
+				0E7D7AFD2A0D57B0007C7F33 /* FirebaseAuth in Frameworks */,
+				0E7D7AFF2A0D57B0007C7F33 /* FirebaseFirestore in Frameworks */,
+				0E7D7B032A0D57B0007C7F33 /* FirebaseStorage in Frameworks */,
+				0E7D7B012A0D57B0007C7F33 /* FirebaseFirestoreSwift in Frameworks */,
+				0E7D7B0F2A0D5BF1007C7F33 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,8 +114,12 @@
 		0E7D7AC42A0BADEF007C7F33 /* CalmCompass */ = {
 			isa = PBXGroup;
 			children = (
+				0E7D7AF72A0D5650007C7F33 /* GoogleService-Info-3.plist */,
+				0E7D7B102A0D5C43007C7F33 /* Images */,
+				0E7D7B0A2A0D5BB8007C7F33 /* LottieFiles */,
+				0E7D7B052A0D58E4007C7F33 /* Views */,
+				0E7D7B042A0D58DB007C7F33 /* ViewModels */,
 				0E7D7AC52A0BADEF007C7F33 /* CalmCompassApp.swift */,
-				0E7D7AC72A0BADEF007C7F33 /* ContentView.swift */,
 				0E7D7AC92A0BADF0007C7F33 /* Assets.xcassets */,
 				0E7D7ACB2A0BADF0007C7F33 /* Preview Content */,
 			);
@@ -127,6 +151,38 @@
 			path = CalmCompassUITests;
 			sourceTree = "<group>";
 		};
+		0E7D7B042A0D58DB007C7F33 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				0E7D7B062A0D59E9007C7F33 /* FirestoreViewModel.swift */,
+				0E7D7B082A0D5A09007C7F33 /* AuthViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0E7D7B052A0D58E4007C7F33 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0E7D7AC72A0BADEF007C7F33 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0E7D7B0A2A0D5BB8007C7F33 /* LottieFiles */ = {
+			isa = PBXGroup;
+			children = (
+				0E7D7B0B2A0D5BD3007C7F33 /* LottieView.swift */,
+			);
+			path = LottieFiles;
+			sourceTree = "<group>";
+		};
+		0E7D7B102A0D5C43007C7F33 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +199,14 @@
 			dependencies = (
 			);
 			name = CalmCompass;
+			packageProductDependencies = (
+				0E7D7AFA2A0D57B0007C7F33 /* FirebaseAnalyticsSwift */,
+				0E7D7AFC2A0D57B0007C7F33 /* FirebaseAuth */,
+				0E7D7AFE2A0D57B0007C7F33 /* FirebaseFirestore */,
+				0E7D7B002A0D57B0007C7F33 /* FirebaseFirestoreSwift */,
+				0E7D7B022A0D57B0007C7F33 /* FirebaseStorage */,
+				0E7D7B0E2A0D5BF1007C7F33 /* Lottie */,
+			);
 			productName = CalmCompass;
 			productReference = 0E7D7AC22A0BADEF007C7F33 /* CalmCompass.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +279,10 @@
 				Base,
 			);
 			mainGroup = 0E7D7AB92A0BADEF007C7F33;
+			packageReferences = (
+				0E7D7AF92A0D57B0007C7F33 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				0E7D7B0D2A0D5BF1007C7F33 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 0E7D7AC32A0BADEF007C7F33 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -232,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E7D7ACD2A0BADF0007C7F33 /* Preview Assets.xcassets in Resources */,
+				0E7D7AF82A0D5650007C7F33 /* GoogleService-Info-3.plist in Resources */,
 				0E7D7ACA2A0BADF0007C7F33 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,7 +326,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E7D7B092A0D5A09007C7F33 /* AuthViewModel.swift in Sources */,
 				0E7D7AC82A0BADEF007C7F33 /* ContentView.swift in Sources */,
+				0E7D7B0C2A0D5BD3007C7F33 /* LottieView.swift in Sources */,
+				0E7D7B072A0D59E9007C7F33 /* FirestoreViewModel.swift in Sources */,
 				0E7D7AC62A0BADEF007C7F33 /* CalmCompassApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -583,6 +655,58 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0E7D7AF92A0D57B0007C7F33 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+		0E7D7B0D2A0D5BF1007C7F33 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0E7D7AFA2A0D57B0007C7F33 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0E7D7AF92A0D57B0007C7F33 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		0E7D7AFC2A0D57B0007C7F33 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0E7D7AF92A0D57B0007C7F33 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		0E7D7AFE2A0D57B0007C7F33 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0E7D7AF92A0D57B0007C7F33 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		0E7D7B002A0D57B0007C7F33 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0E7D7AF92A0D57B0007C7F33 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		0E7D7B022A0D57B0007C7F33 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0E7D7AF92A0D57B0007C7F33 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		0E7D7B0E2A0D5BF1007C7F33 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0E7D7B0D2A0D5BF1007C7F33 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0E7D7ABA2A0BADEF007C7F33 /* Project object */;
 }
