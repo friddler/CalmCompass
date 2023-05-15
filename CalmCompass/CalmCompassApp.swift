@@ -19,6 +19,11 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
 @main
 struct CalmCompassApp: App {
+    
+    init(){
+        FirebaseApp.configure()
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

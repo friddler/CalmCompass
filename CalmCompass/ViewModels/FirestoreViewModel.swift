@@ -10,7 +10,11 @@ import FirebaseFirestore
 import Firebase
 
 class FirestoreViewModel : ObservableObject {
+    
     private let db = Firestore.firestore()
+    
+    
+    
     
     
     
