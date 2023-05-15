@@ -14,7 +14,7 @@
 		0E7D7AD72A0BADF0007C7F33 /* CalmCompassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7D7AD62A0BADF0007C7F33 /* CalmCompassTests.swift */; };
 		0E7D7AE12A0BADF0007C7F33 /* CalmCompassUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7D7AE02A0BADF0007C7F33 /* CalmCompassUITests.swift */; };
 		0E7D7AE32A0BADF0007C7F33 /* CalmCompassUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7D7AE22A0BADF0007C7F33 /* CalmCompassUITestsLaunchTests.swift */; };
-		0E7D7AF82A0D5650007C7F33 /* GoogleService-Info-3.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E7D7AF72A0D5650007C7F33 /* GoogleService-Info-3.plist */; };
+		0E7D7AF82A0D5650007C7F33 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E7D7AF72A0D5650007C7F33 /* GoogleService-Info.plist */; };
 		0E7D7AFB2A0D57B0007C7F33 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0E7D7AFA2A0D57B0007C7F33 /* FirebaseAnalyticsSwift */; };
 		0E7D7AFD2A0D57B0007C7F33 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0E7D7AFC2A0D57B0007C7F33 /* FirebaseAuth */; };
 		0E7D7AFF2A0D57B0007C7F33 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 0E7D7AFE2A0D57B0007C7F33 /* FirebaseFirestore */; };
@@ -59,7 +59,7 @@
 		0E7D7ADC2A0BADF0007C7F33 /* CalmCompassUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalmCompassUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E7D7AE02A0BADF0007C7F33 /* CalmCompassUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalmCompassUITests.swift; sourceTree = "<group>"; };
 		0E7D7AE22A0BADF0007C7F33 /* CalmCompassUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalmCompassUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		0E7D7AF72A0D5650007C7F33 /* GoogleService-Info-3.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-3.plist"; sourceTree = "<group>"; };
+		0E7D7AF72A0D5650007C7F33 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0E7D7B062A0D59E9007C7F33 /* FirestoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreViewModel.swift; sourceTree = "<group>"; };
 		0E7D7B082A0D5A09007C7F33 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		0E7D7B0B2A0D5BD3007C7F33 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
@@ -124,7 +124,7 @@
 		0E7D7AC42A0BADEF007C7F33 /* CalmCompass */ = {
 			isa = PBXGroup;
 			children = (
-				0E7D7AF72A0D5650007C7F33 /* GoogleService-Info-3.plist */,
+				0E7D7AF72A0D5650007C7F33 /* GoogleService-Info.plist */,
 				0E7D7B102A0D5C43007C7F33 /* Images */,
 				0E7D7B0A2A0D5BB8007C7F33 /* LottieFiles */,
 				0E7D7B052A0D58E4007C7F33 /* Views */,
@@ -315,7 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E7D7ACD2A0BADF0007C7F33 /* Preview Assets.xcassets in Resources */,
-				0E7D7AF82A0D5650007C7F33 /* GoogleService-Info-3.plist in Resources */,
+				0E7D7AF82A0D5650007C7F33 /* GoogleService-Info.plist in Resources */,
 				0E7D7ACA2A0BADF0007C7F33 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
