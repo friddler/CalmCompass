@@ -15,6 +15,7 @@ struct ContentView: View {
     var auth = Auth.auth()
     
     var body: some View {
+
         ZStack {
             Color.white
             
@@ -100,6 +101,7 @@ struct ContentView: View {
                 print(error?.localizedDescription)
             }
             
+
         }
     }
     
