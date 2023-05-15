@@ -24,7 +24,11 @@
 		0E7D7B092A0D5A09007C7F33 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7D7B082A0D5A09007C7F33 /* AuthViewModel.swift */; };
 		0E7D7B0C2A0D5BD3007C7F33 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7D7B0B2A0D5BD3007C7F33 /* LottieView.swift */; };
 		0E7D7B0F2A0D5BF1007C7F33 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 0E7D7B0E2A0D5BF1007C7F33 /* Lottie */; };
+
 		C7D0D2C92A121CA0001C2F42 /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D0D2C82A121CA0001C2F42 /* HomeScreenView.swift */; };
+
+		0E7D7B122A122E10007C7F33 /* ShowCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7D7B112A122E10007C7F33 /* ShowCategoryView.swift */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +63,11 @@
 		0E7D7B062A0D59E9007C7F33 /* FirestoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreViewModel.swift; sourceTree = "<group>"; };
 		0E7D7B082A0D5A09007C7F33 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		0E7D7B0B2A0D5BD3007C7F33 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+
 		C7D0D2C82A121CA0001C2F42 /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
+
+		0E7D7B112A122E10007C7F33 /* ShowCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCategoryView.swift; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,7 +174,11 @@
 			isa = PBXGroup;
 			children = (
 				0E7D7AC72A0BADEF007C7F33 /* ContentView.swift */,
+
 				C7D0D2C82A121CA0001C2F42 /* HomeScreenView.swift */,
+
+				0E7D7B112A122E10007C7F33 /* ShowCategoryView.swift */,
+
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -335,6 +347,7 @@
 				C7D0D2C92A121CA0001C2F42 /* HomeScreenView.swift in Sources */,
 				0E7D7B072A0D59E9007C7F33 /* FirestoreViewModel.swift in Sources */,
 				0E7D7AC62A0BADEF007C7F33 /* CalmCompassApp.swift in Sources */,
+				0E7D7B122A122E10007C7F33 /* ShowCategoryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
