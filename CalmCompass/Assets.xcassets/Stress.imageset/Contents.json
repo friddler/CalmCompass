@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "vecteezy_sad-businessman-sitting-on-a-cardboard-box-stressed-with-bad_5639013.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
