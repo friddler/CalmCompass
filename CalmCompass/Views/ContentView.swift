@@ -16,15 +16,16 @@ struct ContentView: View {
     var auth = Auth.auth()
     
     var body: some View {
-//                if userIsLoggedIn {
-//                    HomeScreenView()
-////                    logincontent
-//                }else {
-//                    logincontent
-//                }
-//            }
-    
-//    var logincontent: some View {
+        NavigationView{
+            if userIsLoggedIn {
+                HomeScreenView()
+                //                    logincontent
+            }else {
+                logincontent
+            }
+        }
+    }
+    var logincontent: some View {
         ZStack {
             Color.white
             
@@ -61,7 +62,7 @@ struct ContentView: View {
                 }
                 .padding(.top)
                 .offset(y: 100)
-
+                
                 NavigationLink(destination: LoginView()) {
                     Text("Already have an account? Login")
                         .bold()
