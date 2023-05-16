@@ -12,29 +12,38 @@ struct ContentView: View {
     
     @State private var email = ""
     @State private var password = ""
+    @State private var userIsLoggedIn = false
     var auth = Auth.auth()
     
     var body: some View {
-
+        if userIsLoggedIn {
+            HomeScreenView()
+//            logincontent
+        }else {
+            logincontent
+        }
+    }
+    
+    var logincontent: some View {
         ZStack {
             Color.white
             
             RoundedRectangle(cornerRadius: 30, style: . continuous)
-                .foregroundStyle(.linearGradient(colors: [.purple, .blue], startPoint: .topLeading, endPoint: .bottomTrailing))
+                .foregroundStyle(.linearGradient(colors: [.white], startPoint: .topLeading, endPoint: .bottomTrailing))
                 .frame(width:400, height:900)
             
             VStack(spacing: 20) {
                 Text("  Welcome to CalmCompass")
-                    .foregroundColor(.white)
+                    .foregroundStyle(.linearGradient(colors: [ .purple, .blue], startPoint: .topLeading, endPoint: .bottomTrailing))
                     .font(.system(size: 40, weight: .bold, design: . rounded))
                     .offset(y: -110)
                 
                 TextField("Email", text: $email)
-                    .foregroundColor(.white)
+                    .foregroundStyle(.linearGradient(colors: [ .purple, .blue], startPoint: .topLeading, endPoint: .bottomTrailing))
                     .textFieldStyle(.plain)
                     .placeholder(when: email.isEmpty) {
                         Text("Email")
-                            .foregroundColor(.white)
+                            .foregroundStyle(.linearGradient(colors: [ .purple, .blue], startPoint: .topLeading, endPoint: .bottomTrailing))
                             .bold()
                     }
                 
@@ -43,11 +52,11 @@ struct ContentView: View {
                     .foregroundColor(.white)
                 
                 SecureField("Password", text: $password)
-                    .foregroundColor(.white)
+                    .foregroundStyle(.linearGradient(colors: [ .purple, .blue], startPoint: .topLeading, endPoint: .bottomTrailing))
                     .textFieldStyle(.plain)
                     .placeholder(when: password.isEmpty){
                         Text("Password")
-                            .foregroundColor(.white)
+                            .foregroundStyle(.linearGradient(colors: [ .purple, .blue], startPoint: .topLeading, endPoint: .bottomTrailing))
                             .bold()
                     }
                 
@@ -75,7 +84,7 @@ struct ContentView: View {
                 } label: {
                     Text("Already have an account? Login")
                         .bold()
-                        .foregroundColor(.white)
+                        .foregroundStyle(.linearGradient(colors: [ .purple, .blue], startPoint: .topLeading, endPoint: .bottomTrailing))
                 }
                 .padding(.top)
                 .offset(y: 110)
@@ -83,6 +92,13 @@ struct ContentView: View {
 
             }
             .frame(width: 350)
+            .onAppear{
+                Auth.auth().addStateDidChangeListener{auth, user in
+                    if user != nil {
+                        userIsLoggedIn.toggle()
+                    }
+                }
+            }
         }
         .ignoresSafeArea()
     }
