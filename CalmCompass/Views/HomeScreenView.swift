@@ -8,35 +8,37 @@ import SwiftUI
 
 struct HomeScreenView: View {
     
-    var data: [Int] = Array(1...6)
-    let images = ["HapinessLogo","MeditationLogo","ReduceStressLogo","SleepLogo","anxietyLogo","Yoga"]
+    //var data: [Int] = Array(1...6)
+   // let images = ["HapinessLogo","MeditationLogo","ReduceStressLogo","SleepLogo","anxietyLogo","Yoga"]
+    let categories: [Category] = Category.categories
+    
     let columns = [GridItem(.adaptive(minimum: 170))]
     
     var body: some View {
         NavigationView{
             ScrollView{
                 LazyVGrid(columns: columns, spacing: 10) {
-                    ForEach(data, id: \.self) { number in
-                        ZStack {
-                            Rectangle()
-                                .fill(Color.white)
-                                .frame(width: 170, height: 170)
-                            Image(images[number-1])
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 170, height: 170)
-                                .cornerRadius(20)
-                                .frame(width: 17, height: 170)
+                    ForEach(categories, id: \.id) { category in
+                        NavigationLink(destination: ShowCategoryView(category: category)) {
+                            ZStack {
+                                Rectangle()
+                                    .fill(Color.white)
+                                    .frame(width: 170, height: 170)
+                                Image(category.imageName)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 170, height: 170)
+                                    .cornerRadius(20)
+                                    .frame(width: 17, height: 170)
+                            }
                         }
                     }
+                    
                 }
+                .padding()
+                .background(Image("bgtest"))
                 
             }
-            .padding()
-            .navigationTitle("Welcome home")
-            .background(Image("bgtest"))
-                   
-            
 
         }
     }

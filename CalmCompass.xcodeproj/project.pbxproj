@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E3D32022A13757E00C9546D /* CategoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3D32012A13757E00C9546D /* CategoryData.swift */; };
 		0E7D7AC62A0BADEF007C7F33 /* CalmCompassApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7D7AC52A0BADEF007C7F33 /* CalmCompassApp.swift */; };
 		0E7D7AC82A0BADEF007C7F33 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7D7AC72A0BADEF007C7F33 /* ContentView.swift */; };
 		0E7D7ACA2A0BADF0007C7F33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E7D7AC92A0BADF0007C7F33 /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E3D32012A13757E00C9546D /* CategoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryData.swift; sourceTree = "<group>"; };
 		0E7D7AC22A0BADEF007C7F33 /* CalmCompass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalmCompass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E7D7AC52A0BADEF007C7F33 /* CalmCompassApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalmCompassApp.swift; sourceTree = "<group>"; };
 		0E7D7AC72A0BADEF007C7F33 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -95,6 +97,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E3D32002A13755500C9546D /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				0E3D32012A13757E00C9546D /* CategoryData.swift */,
+			);
+			path = DataModels;
+			sourceTree = "<group>";
+		};
 		0E7D7AB92A0BADEF007C7F33 = {
 			isa = PBXGroup;
 			children = (
@@ -119,7 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				0E7D7AF72A0D5650007C7F33 /* GoogleService-Info.plist */,
-				0E7D7B102A0D5C43007C7F33 /* Images */,
+				0E3D32002A13755500C9546D /* DataModels */,
 				0E7D7B0A2A0D5BB8007C7F33 /* LottieFiles */,
 				0E7D7B052A0D58E4007C7F33 /* Views */,
 				0E7D7B042A0D58DB007C7F33 /* ViewModels */,
@@ -180,13 +190,6 @@
 				0E7D7B0B2A0D5BD3007C7F33 /* LottieView.swift */,
 			);
 			path = LottieFiles;
-			sourceTree = "<group>";
-		};
-		0E7D7B102A0D5C43007C7F33 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,6 +342,7 @@
 				0E7D7B072A0D59E9007C7F33 /* FirestoreViewModel.swift in Sources */,
 				0E7D7AC62A0BADEF007C7F33 /* CalmCompassApp.swift in Sources */,
 				0E7D7B122A122E10007C7F33 /* ShowCategoryView.swift in Sources */,
+				0E3D32022A13757E00C9546D /* CategoryData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
