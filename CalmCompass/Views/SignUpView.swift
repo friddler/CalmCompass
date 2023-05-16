@@ -95,6 +95,7 @@ struct SignUpView: View {
                 print(error.localizedDescription)
             }else if let user = result?.user {
                 saveUsername(user: user)
+                //need navigation to HomeScreen after this
             }
         }
     }

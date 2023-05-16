@@ -85,6 +85,7 @@ struct LoginView: View {
             auth.signIn(withEmail: email, password: password) { result, error in
                 if error != nil {
                     print(error?.localizedDescription)
+                    //need navigation to HomeScreen after this
                 }
             }
         }

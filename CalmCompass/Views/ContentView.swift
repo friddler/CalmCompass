@@ -16,15 +16,15 @@ struct ContentView: View {
     var auth = Auth.auth()
     
     var body: some View {
-                if userIsLoggedIn {
-                    HomeScreenView()
+//                if userIsLoggedIn {
+//                    HomeScreenView()
+////                    logincontent
+//                }else {
 //                    logincontent
-                }else {
-                    logincontent
-                }
-            }
+//                }
+//            }
     
-    var logincontent: some View {
+//    var logincontent: some View {
         ZStack {
             Color.white
             
