@@ -19,4 +19,6 @@ class FirestoreViewModel : ObservableObject {
     
     
     // functions for handling firestore
+    
+    
 }
