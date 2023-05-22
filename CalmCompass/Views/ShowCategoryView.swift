@@ -10,8 +10,6 @@ import SwiftUI
 struct ShowCategoryView: View {
     
     let category: Category
-    
-    @State var selectedContent: Content?
     @State var showContentSheet = false
     
     var body: some View {
@@ -26,21 +24,25 @@ struct ShowCategoryView: View {
             
             ScrollView {
                 VStack(alignment: .leading, spacing: 20) {
-                    CategoryRowView(title: "Articles", content: category.content)
-                    CategoryRowView(title: "Music", content: category.content)
-                    CategoryRowView(title: "Exercises", content: category.content)
+                    CategoryRowView(title: "Articles", content: category.articleContent)
+                    CategoryRowView(title: "Music", content: category.musicContent)
+                    CategoryRowView(title: "Exercises", content: category.exerciseContent)
                 }
                 .padding(.leading, 10)
             }
+            
         }
         .edgesIgnoringSafeArea(.all)
+        
     }
     
 }
 
 struct CategoryRowView: View {
+    
     let title: String
     let content: [Content]
+    
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -54,31 +56,30 @@ struct CategoryRowView: View {
                         CategoryItemView(content: item)
                     }
                 }
-             
+                
             }
         }
     }
 }
 
 struct CategoryItemView: View {
-    //let imageName: String
-    
     
     let content : Content
+    
     var body: some View {
-        Image(content.imageName)
-            .resizable()
-            .aspectRatio(contentMode: .fill)
-            .frame(width: 170, height: 110)
-            .cornerRadius(10)
-            .onTapGesture {
-                // Handle item tap action
-            }
+        NavigationLink(destination: MaterialView(title: content.title, contentInfo: content.contentInfo)) {
+            Image(content.imageName)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 170, height: 110)
+                .cornerRadius(10)
+        }
     }
 }
 
+
 struct ShowCategoryView_Previews: PreviewProvider {
     static var previews: some View {
-        ShowCategoryView(category: Category(id: "happinessCat", title: "Happiness", imageName: "HapinessLogo", content: [Content(id: "articleH1", title: "Happiness Article", imageName: "hapinessLogo", contentInfo: "This is test content")]))
+        ShowCategoryView(category: Category(id: "", title: "", imageName: "", articleContent: [], musicContent: [], exerciseContent: []))
     }
 }
