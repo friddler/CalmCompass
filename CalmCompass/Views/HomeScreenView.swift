@@ -15,7 +15,6 @@ struct HomeScreenView: View {
     let columns = [GridItem(.adaptive(minimum: 170))]
     
     var body: some View {
-        NavigationView{
             ScrollView{
                 LazyVGrid(columns: columns, spacing: 10) {
                     ForEach(categories, id: \.id) { category in
@@ -39,8 +38,6 @@ struct HomeScreenView: View {
                 .background(Image("bgtest"))
                 
             }
-
-        }
     }
 }
     
