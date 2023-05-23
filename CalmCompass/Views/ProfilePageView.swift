@@ -15,6 +15,8 @@ struct ProfilePageView: View {
     @State private var selectedImage: UIImage?
     @State private var isEditMode = false
     @State private var editedUsername = ""
+    @State private var username: String = ""
+    @State private var email: String = ""
     
     let db = Firestore.firestore()
     
@@ -52,7 +54,7 @@ struct ProfilePageView: View {
                             .foregroundColor(.white)
                             .offset(x: 142, y: 1)
                     } else {
-                        Text(editedUsername)
+                        Text(username)
                             .font(.title2)
                             .bold()
                             .foregroundColor(.white)
@@ -71,7 +73,7 @@ struct ProfilePageView: View {
                         
                         HStack {
                             Image(systemName: "envelope")
-                            Text("username@hotmail.com")
+                            Text(email)
                         }
                     }
                     
@@ -89,52 +91,71 @@ struct ProfilePageView: View {
                             .padding()
                             .background(Color.orange)
                             .cornerRadius(20)
-                        
                     }
                     
                     Spacer().frame(height: 370)
                 }
             }
         }
+        .onAppear {
+            fetchUserData()
+        }
     }
     
-        func fetchProfileImage() {
-               #if DEBUG
-               print("Fetching profile image is not supported in Canvas preview.")
-               #else
-               let storageRef = Storage.storage().reference()
-               let imageRef = storageRef.child("images/profile.png")
-               imageRef.getData(maxSize: 1 * 1024 * 1024) { (data, error) in
-                   if let error = error {
-                       // Handle error while fetching image
-                       print("Error fetching image: \(error.localizedDescription)")
-                   } else {
-                       if let imageData = data {
-                           selectedImage = UIImage(data: imageData)
-                       }
-                   }
-               }
-               #endif
-           }
-    
-    func saveUsername() {
+    func fetchUserData() {
         guard let uid = Auth.auth().currentUser?.uid else {
             print("User is not authenticated.")
             return
         }
         
-        db.collection("userNames").document(uid).setData(["username": editedUsername]) { error in
-            if let error = error {
-                print("Error saving username: \(error.localizedDescription)")
+        db.collection("users").document(uid).getDocument { (document, error) in
+            if let document = document, document.exists {
+                let data = document.data()
+                username = data?["username"] as? String ?? ""
+                email = data?["email"] as? String ?? ""
             } else {
-                print("Username saved successfully.")
+                print("Document does not exist")
             }
         }
     }
-}
-
+    
+    func fetchProfileImage() {
+        #if DEBUG
+        print("Fetching profile image is not supported in Canvas preview.")
+        #else
+        let storageRef = Storage.storage().reference()
+        let imageRef = storageRef.child("images/profile.png")
+        imageRef.getData(maxSize: 1 * 1024 * 1024) { (data, error) in
+                      if let error = error {
+                          // Handle error while fetching image
+                          print("Error fetching image: \(error.localizedDescription)")
+                      } else {
+                          if let imageData = data {
+                              selectedImage = UIImage(data: imageData)
+                          }
+                      }
+                  }
+                  #endif
+              }
+              
+              func saveUsername() {
+                  guard let uid = Auth.auth().currentUser?.uid else {
+                      print("User is not authenticated.")
+                      return
+                  }
+                  
+                  db.collection("users").document(uid).updateData(["username": editedUsername]) { error in
+                      if let error = error {
+                          print("Error saving username: \(error.localizedDescription)")
+                      } else {
+                          print("Username saved successfully.")
+                          username = editedUsername
+                      }
+                  }
+              }
+          }
 struct ProfilePageView_Previews: PreviewProvider {
     static var previews: some View {
         ProfilePageView()
-    }
+  }
 }
