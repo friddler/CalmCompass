@@ -60,6 +60,8 @@ class AuthViewModel: ObservableObject {
                                     .fill(.linearGradient(colors: [.purple, .blue], startPoint: .top, endPoint: .bottom))
                             )
                             .foregroundColor(.white)
+                            .navigationBarHidden(true)
+                                .navigationBarBackButtonHidden(true)
                     }
                     .padding(.top)
                     .offset(y: 100)
@@ -71,6 +73,9 @@ class AuthViewModel: ObservableObject {
                     }
                     .padding(.top)
                     .offset(y: 110)
+                    .navigationBarHidden(true)
+                    .navigationBarBackButtonHidden(true)
+                    .navigationTitle("")
                     
                 }
                 .frame(width: 350)
@@ -165,12 +170,13 @@ class AuthViewModel: ObservableObject {
                 .frame(width: 350)
             }
             .ignoresSafeArea()
-            .navigationBarHidden(true)
             .navigationTitle("")
             .navigationBarTitleDisplayMode(.inline)
             .background( NavigationLink(destination: HomeScreenView(), isActive: $navigateToHome) {
                 EmptyView()
-            })
+            }
+                .navigationBarHidden(true)
+                    .navigationBarBackButtonHidden(true))
         }
     }
     
@@ -276,6 +282,8 @@ class AuthViewModel: ObservableObject {
                 NavigationLink(destination: HomeScreenView(), isActive: $navigateToHome) {
                     EmptyView()
                 }
+                .navigationBarHidden(true)
+                    .navigationBarBackButtonHidden(true)
             }
             .ignoresSafeArea()
         }
