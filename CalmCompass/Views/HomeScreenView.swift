@@ -31,6 +31,9 @@ struct HomeScreenView: View {
                                     .frame(width: 17, height: 170)
                             }
                         }
+                        .navigationTitle("")
+                        .navigationBarBackButtonHidden(true)
+                        .navigationBarHidden(true)
                     }
                     
                 }

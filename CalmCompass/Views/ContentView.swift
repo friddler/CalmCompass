@@ -20,7 +20,8 @@ struct ContentView: View {
             
             //            var logincontent: some View {
             AuthViewModel.getStartedView()
-        }
+        }.navigationBarHidden(true)
+            .navigationBarBackButtonHidden(true)
 //        Text("Requesting Notification Permission...")
             .onAppear {
                 requestNotificationPermission()
