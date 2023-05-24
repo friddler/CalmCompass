@@ -33,6 +33,10 @@
 		0ECBF94B2A1BB19600B9EEBB /* nightsky.json in Resources */ = {isa = PBXBuildFile; fileRef = 0ECBF94A2A1BB19600B9EEBB /* nightsky.json */; };
 		0ECBF94D2A1BB1B300B9EEBB /* moon.json in Resources */ = {isa = PBXBuildFile; fileRef = 0ECBF94C2A1BB1B300B9EEBB /* moon.json */; };
 		0ECBF94F2A1BBF2C00B9EEBB /* train.json in Resources */ = {isa = PBXBuildFile; fileRef = 0ECBF94E2A1BBF2C00B9EEBB /* train.json */; };
+		0ECBF9512A1CDFC700B9EEBB /* yogapink.json in Resources */ = {isa = PBXBuildFile; fileRef = 0ECBF9502A1CDFC700B9EEBB /* yogapink.json */; };
+		0ECBF9532A1CEF8800B9EEBB /* hair.json in Resources */ = {isa = PBXBuildFile; fileRef = 0ECBF9522A1CEF8800B9EEBB /* hair.json */; };
+		0ECBF9552A1E096000B9EEBB /* stressnature.json in Resources */ = {isa = PBXBuildFile; fileRef = 0ECBF9542A1E096000B9EEBB /* stressnature.json */; };
+		0ECBF9572A1E0BF100B9EEBB /* sunrise.json in Resources */ = {isa = PBXBuildFile; fileRef = 0ECBF9562A1E0BF100B9EEBB /* sunrise.json */; };
 		B1EF1ECB2A14D9C500C58AAD /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EF1EC92A14D9C500C58AAD /* SignUpView.swift */; };
 		B1EF1ECC2A14D9C500C58AAD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EF1ECA2A14D9C500C58AAD /* LoginView.swift */; };
 		C7D0D2C92A121CA0001C2F42 /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D0D2C82A121CA0001C2F42 /* HomeScreenView.swift */; };
@@ -80,6 +84,10 @@
 		0ECBF94A2A1BB19600B9EEBB /* nightsky.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nightsky.json; sourceTree = "<group>"; };
 		0ECBF94C2A1BB1B300B9EEBB /* moon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = moon.json; sourceTree = "<group>"; };
 		0ECBF94E2A1BBF2C00B9EEBB /* train.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = train.json; sourceTree = "<group>"; };
+		0ECBF9502A1CDFC700B9EEBB /* yogapink.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = yogapink.json; sourceTree = "<group>"; };
+		0ECBF9522A1CEF8800B9EEBB /* hair.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hair.json; sourceTree = "<group>"; };
+		0ECBF9542A1E096000B9EEBB /* stressnature.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stressnature.json; sourceTree = "<group>"; };
+		0ECBF9562A1E0BF100B9EEBB /* sunrise.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sunrise.json; sourceTree = "<group>"; };
 		B1EF1EC92A14D9C500C58AAD /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		B1EF1ECA2A14D9C500C58AAD /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C7D0D2C82A121CA0001C2F42 /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
@@ -215,7 +223,11 @@
 				0E7D7B0B2A0D5BD3007C7F33 /* LottieView.swift */,
 				0ECBF9482A1BB17000B9EEBB /* flowers.json */,
 				0ECBF94E2A1BBF2C00B9EEBB /* train.json */,
+				0ECBF9522A1CEF8800B9EEBB /* hair.json */,
+				0ECBF9562A1E0BF100B9EEBB /* sunrise.json */,
 				0ECBF94C2A1BB1B300B9EEBB /* moon.json */,
+				0ECBF9542A1E096000B9EEBB /* stressnature.json */,
+				0ECBF9502A1CDFC700B9EEBB /* yogapink.json */,
 				0ECBF94A2A1BB19600B9EEBB /* nightsky.json */,
 				0ECBF9462A1BB14500B9EEBB /* naturedark.json */,
 			);
@@ -341,8 +353,12 @@
 				0ECBF9472A1BB14500B9EEBB /* naturedark.json in Resources */,
 				0ECBF9492A1BB17000B9EEBB /* flowers.json in Resources */,
 				0E7D7ACD2A0BADF0007C7F33 /* Preview Assets.xcassets in Resources */,
+				0ECBF9572A1E0BF100B9EEBB /* sunrise.json in Resources */,
+				0ECBF9512A1CDFC700B9EEBB /* yogapink.json in Resources */,
 				0E7D7AF82A0D5650007C7F33 /* GoogleService-Info.plist in Resources */,
 				0ECBF94B2A1BB19600B9EEBB /* nightsky.json in Resources */,
+				0ECBF9552A1E096000B9EEBB /* stressnature.json in Resources */,
+				0ECBF9532A1CEF8800B9EEBB /* hair.json in Resources */,
 				0ECBF94D2A1BB1B300B9EEBB /* moon.json in Resources */,
 				0E7D7ACA2A0BADF0007C7F33 /* Assets.xcassets in Resources */,
 				0ECBF94F2A1BBF2C00B9EEBB /* train.json in Resources */,
