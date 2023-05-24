@@ -17,33 +17,36 @@ struct ProfilePageView: View {
     @State private var editedUsername = ""
     @State private var username: String = ""
     @State private var email: String = ""
+    @State private var tabSelected: Tab = .person
     
     let db = Firestore.firestore()
     
     var body: some View {
         ZStack {
-            Image("profilebg")
+            Image("profilebg2")
                 .resizable()
                 .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
             
             VStack {
-                VStack(spacing: 10) {
+                VStack(spacing: 20) {
                     ZStack {
-                        Image(systemName: "person.circle.fill")
+                        Image("profiletests")
                             .resizable()
-                            .frame(width: 120, height: 120)
+                            .scaledToFill()
+                            .frame(width: 140, height: 140)
                             .clipShape(Circle())
-                            .foregroundColor(.white)
+                            .offset(y: 40)
+                          
                         
                         Button(action: {
                             fetchProfileImage()
                         }) {
                             Image(systemName: "plus.circle.fill")
                                 .resizable()
-                                .frame(width: 30, height: 30)
+                                .frame(width: 35, height: 35)
                                 .foregroundColor(.white)
-                                .offset(x: 30, y: 30)
+                                .offset(x: 45, y: 85)
                         }
                     }
                     
@@ -52,7 +55,7 @@ struct ProfilePageView: View {
                             .font(.title2)
                             .bold()
                             .foregroundColor(.white)
-                            .offset(x: 142, y: 1)
+                            .offset(x: 145, y: 35)
                     } else {
                         Text(username)
                             .font(.title2)
@@ -60,24 +63,24 @@ struct ProfilePageView: View {
                             .foregroundColor(.white)
                     }
                     
-                    Spacer().frame(height: 20)
-                    
-                    VStack(alignment: .leading, spacing: 15) {
-                        HStack {
-                            Image(systemName: "person")
-                            Text("Firstname")
-                                .foregroundColor(.orange)
-                            Text("Lastname")
-                                .foregroundColor(.orange)
+                    VStack {
+                        Form {
+                            Section(header: Image(systemName: "person")
+                                .foregroundColor(.white)
+                                            .font(.system(size: 24))) {
+                                
+                                Text("Johanna Doe")
+                            }
+                            Section(header: Image(systemName: "envelope")
+                                .foregroundColor(.white)
+                                            .font(.system(size: 24))) { // Increase the font size here
+                                Text("johannadoe@hotmail.com")
+                            }
                         }
-                        
-                        HStack {
-                            Image(systemName: "envelope")
-                            Text(email)
-                        }
+                        .scrollContentBackground(.hidden)
                     }
+                
                     
-                    Spacer().frame(height: 20)
                     
                     Button(action: {
                         isEditMode.toggle()
@@ -89,13 +92,14 @@ struct ProfilePageView: View {
                             .font(.headline)
                             .foregroundColor(.white)
                             .padding()
-                            .background(Color.orange)
+                            .background(Color.cyan)
                             .cornerRadius(20)
                     }
                     
-                    Spacer().frame(height: 370)
+                    Spacer().frame(height: 100)
                 }
             }
+            .overlay(Navigation_bar_View(selectedTab: $tabSelected))
         }
         .onAppear {
             fetchUserData()

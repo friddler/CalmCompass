@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @State private var tabSelected: Tab = .house
+    @State private var tabSelected: Tab = .gearshape
     @State private var notificationsEnabled = true
     @State private var darkModeEnabled = true
     

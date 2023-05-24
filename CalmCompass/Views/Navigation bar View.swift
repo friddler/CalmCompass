@@ -55,7 +55,7 @@ enum Tab: String, CaseIterable {
                         Spacer()
                     }
                 }
-                .frame(width: 400, height: 80)
+                .frame(width: 400, height: 90)
                 .background(.thinMaterial)
                 .cornerRadius(20)
                 .padding()
