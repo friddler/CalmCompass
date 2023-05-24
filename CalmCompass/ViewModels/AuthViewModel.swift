@@ -98,6 +98,9 @@ class AuthViewModel: ObservableObject {
         @State private var navigateToHome = false
         
         var auth = Auth.auth()
+        var isSignInButtonDisabled: Bool {
+            [email, password].contains(where: \.isEmpty)
+        }
         
         var body: some View {
             ZStack {
@@ -166,6 +169,12 @@ class AuthViewModel: ObservableObject {
                     }
                     .padding(.top)
                     .offset(y: 10)
+                    .background(
+                        isSignInButtonDisabled ? 
+                        LinearGradient(colors: [.white], startPoint: .topLeading, endPoint: .bottomTrailing) :
+                            LinearGradient(colors: [.white], startPoint: .topLeading, endPoint: .bottomTrailing)
+                    )
+                    .disabled(isSignInButtonDisabled)
                 }
                 .frame(width: 350)
             }
