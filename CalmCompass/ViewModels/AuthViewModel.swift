@@ -98,6 +98,9 @@ class AuthViewModel: ObservableObject {
         @State private var navigateToHome = false
         
         var auth = Auth.auth()
+        var isSignInButtonDisabled: Bool {
+            [email, password].contains(where: \.isEmpty)
+        }
         
         var body: some View {
             ZStack {
@@ -150,7 +153,6 @@ class AuthViewModel: ObservableObject {
                             if error != nil {
                                 print(error?.localizedDescription)
                                 //need navigation to HomeScreen after this
-                                
                             }
                         }
                         navigateToHome = true
@@ -166,6 +168,12 @@ class AuthViewModel: ObservableObject {
                     }
                     .padding(.top)
                     .offset(y: 10)
+                    .background(
+                        isSignInButtonDisabled ? // how to add a gradient to a button in SwiftUI if the button is disabled
+                        LinearGradient(colors: [.white], startPoint: .topLeading, endPoint: .bottomTrailing) :
+                            LinearGradient(colors: [.white], startPoint: .topLeading, endPoint: .bottomTrailing)
+                    )
+                    .disabled(isSignInButtonDisabled)
                 }
                 .frame(width: 350)
             }

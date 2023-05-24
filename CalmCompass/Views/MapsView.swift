@@ -1,0 +1,87 @@
+//
+//  MapsView.swift
+//  CalmCompass
+//
+//  Created by Edgar Backer on 2023-05-24.
+//
+
+import SwiftUI
+import MapKit
+
+struct MapsView: View {
+    
+    @State var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 60.1281610, longitude: 18.6435010), span: MKCoordinateSpan(latitudeDelta: 20.00, longitudeDelta: 10.00))
+    @State private var selectedPlace: Place?
+    @State private var isShowingMessage = false
+    
+    var places =
+    [
+        Place(name: "Helags Friskvård", street: "Ljungdalen", houseNumber: "210", postalCode: 84599, City: "Ljungdalen", latitude: 62.8541509, longitude: 12.7827347),
+        Place(name: "Stockholm", street: "Gotlandsgatan", houseNumber: "88", postalCode: 11638, City: "Stockholm", latitude: 59.3107017, longitude: 18.0855614),
+        Place(name: "Svensk Kroppsterapi", street: "Rinmansgatan", houseNumber: "9", postalCode: 63346, City: "Eskilstuna", latitude: 59.3826082, longitude: 16.5103790),
+        Place(name: "Psykologi Idrott Massage", street: "Skatåsvägen", houseNumber: "25", postalCode: 41655, City: "Göteborg", latitude: 57.7031101, longitude: 12.0376512)
+        
+    ]
+    
+    var body: some View {
+        VStack{
+            Map(coordinateRegion: $region,
+                annotationItems: places) { place in
+                //                MapMarker(coordinate: place.coordinate)
+                MapAnnotation(coordinate: place.coordinate){
+                    Button(action: {
+                        selectedPlace =  place
+                    }){
+                        MapPinView(place: place)
+                    }
+                }
+            }
+        }
+        .sheet(item: $selectedPlace) { place in
+            PlaceDetailView(selectedPlace: $selectedPlace, place: place)
+                }
+    }
+}
+
+struct MapPinView : View{
+    var place : Place
+    
+    var body : some View {
+       VStack {
+            Image(systemName: "house.fill")
+                .resizable()
+                .frame(width: 20, height: 20)
+            Text(place.name)
+        }
+    }
+}
+
+struct PlaceDetailView: View {
+    @Binding var selectedPlace: Place?
+    var place: Place
+    
+    var body: some View {
+        VStack {
+            Text(place.name)
+                .font(.title)
+            Text("Address: \(place.street) \(place.houseNumber), \(place.postalCode) \(place.City)")
+            Text("Latitude: \(place.latitude)")
+            Text("Longitude: \(place.longitude)")
+            
+            // Add any other information you want to display
+            
+            Button("Close") {
+                selectedPlace = nil
+            }
+        }
+        .padding()
+    }
+}
+
+
+
+struct MapsView_Previews: PreviewProvider {
+    static var previews: some View {
+        MapsView()
+    }
+}

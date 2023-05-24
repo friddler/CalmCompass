@@ -30,6 +30,9 @@
 		0ECBF93F2A1B57BF00B9EEBB /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECBF93E2A1B57BE00B9EEBB /* MaterialView.swift */; };
 		B1EF1ECB2A14D9C500C58AAD /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EF1EC92A14D9C500C58AAD /* SignUpView.swift */; };
 		B1EF1ECC2A14D9C500C58AAD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EF1ECA2A14D9C500C58AAD /* LoginView.swift */; };
+		B1F728792A1CBA6C00E192B4 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F728782A1CBA6B00E192B4 /* NotificationView.swift */; };
+		B1F7287B2A1E3FF500E192B4 /* MapsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F7287A2A1E3FF400E192B4 /* MapsView.swift */; };
+		B1F7287D2A1E4AE400E192B4 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F7287C2A1E4AE400E192B4 /* Place.swift */; };
 		C7D0D2C92A121CA0001C2F42 /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D0D2C82A121CA0001C2F42 /* HomeScreenView.swift */; };
 		C7F513882A14E286001C1AEE /* ProfilePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F513872A14E286001C1AEE /* ProfilePageView.swift */; };
 /* End PBXBuildFile section */
@@ -72,6 +75,9 @@
 		0ECBF93E2A1B57BE00B9EEBB /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		B1EF1EC92A14D9C500C58AAD /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		B1EF1ECA2A14D9C500C58AAD /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		B1F728782A1CBA6B00E192B4 /* NotificationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		B1F7287A2A1E3FF400E192B4 /* MapsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsView.swift; sourceTree = "<group>"; };
+		B1F7287C2A1E4AE400E192B4 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		C7D0D2C82A121CA0001C2F42 /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		C7F513872A14E286001C1AEE /* ProfilePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,6 +118,7 @@
 			children = (
 				0E3D32012A13757E00C9546D /* CategoryData.swift */,
 				0ECBF93C2A1B573400B9EEBB /* Content.swift */,
+				B1F7287C2A1E4AE400E192B4 /* Place.swift */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -189,12 +196,14 @@
 			isa = PBXGroup;
 			children = (
 				0E7D7AC72A0BADEF007C7F33 /* ContentView.swift */,
+				B1F728782A1CBA6B00E192B4 /* NotificationView.swift */,
 				B1EF1ECA2A14D9C500C58AAD /* LoginView.swift */,
 				0ECBF93E2A1B57BE00B9EEBB /* MaterialView.swift */,
 				B1EF1EC92A14D9C500C58AAD /* SignUpView.swift */,
 				C7D0D2C82A121CA0001C2F42 /* HomeScreenView.swift */,
 				0E7D7B112A122E10007C7F33 /* ShowCategoryView.swift */,
 				C7F513872A14E286001C1AEE /* ProfilePageView.swift */,
+				B1F7287A2A1E3FF400E192B4 /* MapsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -350,6 +359,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1F7287B2A1E3FF500E192B4 /* MapsView.swift in Sources */,
 				0E7D7B092A0D5A09007C7F33 /* AuthViewModel.swift in Sources */,
 				0E7D7AC82A0BADEF007C7F33 /* ContentView.swift in Sources */,
 				0E7D7B0C2A0D5BD3007C7F33 /* LottieView.swift in Sources */,
@@ -359,6 +369,8 @@
 				C7F513882A14E286001C1AEE /* ProfilePageView.swift in Sources */,
 				0E7D7AC62A0BADEF007C7F33 /* CalmCompassApp.swift in Sources */,
 				0E7D7B122A122E10007C7F33 /* ShowCategoryView.swift in Sources */,
+				B1F728792A1CBA6C00E192B4 /* NotificationView.swift in Sources */,
+				B1F7287D2A1E4AE400E192B4 /* Place.swift in Sources */,
 				B1EF1ECB2A14D9C500C58AAD /* SignUpView.swift in Sources */,
 				B1EF1ECC2A14D9C500C58AAD /* LoginView.swift in Sources */,
 				0E3D32022A13757E00C9546D /* CategoryData.swift in Sources */,
