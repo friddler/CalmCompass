@@ -68,7 +68,7 @@ struct CategoryItemView: View {
     let categoryID: String
     
     var body: some View {
-        NavigationLink(destination: MaterialView(title: content.title, contentInfo: content.contentInfo, categoryID: categoryID)) {
+        NavigationLink(destination: ArticleView(title: content.title, contentInfo: content.contentInfo, categoryID: categoryID)) {
             VStack {
                 Image(content.imageName)
                     .resizable()
