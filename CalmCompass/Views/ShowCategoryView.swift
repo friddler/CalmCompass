@@ -10,7 +10,6 @@ import SwiftUI
 struct ShowCategoryView: View {
     
     let category: Category
-    @State var showContentSheet = false
     
     var body: some View {
         VStack {
@@ -24,9 +23,9 @@ struct ShowCategoryView: View {
             
             ScrollView {
                 VStack(alignment: .leading, spacing: 20) {
-                    CategoryRowView(title: "Articles", content: category.articleContent)
-                    CategoryRowView(title: "Music", content: category.musicContent)
-                    CategoryRowView(title: "Exercises", content: category.exerciseContent)
+                    CategoryRowView(title: "Articles", content: category.articleContent, categoryID: category.id)
+                    CategoryRowView(title: "Music", content: category.musicContent, categoryID: category.id)
+                    CategoryRowView(title: "Exercises", content: category.exerciseContent, categoryID: category.id)
                 }
                 .padding(.leading, 10)
             }
@@ -42,6 +41,7 @@ struct CategoryRowView: View {
     
     let title: String
     let content: [Content]
+    let categoryID: String
     
     
     var body: some View {
@@ -53,7 +53,7 @@ struct CategoryRowView: View {
             ScrollView(.horizontal) {
                 HStack(spacing: 20) {
                     ForEach(content, id: \.id) { item in
-                        CategoryItemView(content: item)
+                        CategoryItemView(content: item, categoryID: categoryID)
                     }
                 }
                 
@@ -65,14 +65,24 @@ struct CategoryRowView: View {
 struct CategoryItemView: View {
     
     let content : Content
+    let categoryID: String
     
     var body: some View {
-        NavigationLink(destination: MaterialView(title: content.title, contentInfo: content.contentInfo)) {
-            Image(content.imageName)
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 170, height: 110)
-                .cornerRadius(10)
+        NavigationLink(destination: MaterialView(title: content.title, contentInfo: content.contentInfo, categoryID: categoryID)) {
+            VStack {
+                Image(content.imageName)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 170, height: 110)
+                    .cornerRadius(10)
+                
+                Text(content.title)
+                    .font(.subheadline)
+                    .multilineTextAlignment(.center)
+                    .lineLimit(2)
+                    .foregroundColor(Color.black)
+            }
+            
         }
     }
 }
@@ -80,6 +90,23 @@ struct CategoryItemView: View {
 
 struct ShowCategoryView_Previews: PreviewProvider {
     static var previews: some View {
-        ShowCategoryView(category: Category(id: "", title: "", imageName: "", articleContent: [], musicContent: [], exerciseContent: []))
+        let exampleCategory = Category(
+            id: "1",
+            title: "Example Category",
+            imageName: "exampleImage",
+            articleContent: [
+                ArticleContent(id: "1", title: "Example article happiness", imageName: "SleepLogo", contentInfo: "Article 1 Info"),
+                ArticleContent(id: "2", title: "Example Article 2", imageName: "SleepLogo", contentInfo: "Article 2 Info")
+            ],
+            musicContent: [
+                MusicContent(id: "1", title: "Example Music 1", imageName: "SleepLogo", contentInfo: "Music 1 Info", musicFile: "music1File"),
+                MusicContent(id: "2", title: "Example Music 2", imageName: "SleepLogo", contentInfo: "Music 2 Info", musicFile: "music2File")
+            ],
+            exerciseContent: [
+                ExerciseContent(id: "1", title: "Example Exercise 1", imageName: "SleepLogo", contentInfo: "Exercise 1 Info", videoURL: URL(string: "https://example.com/exercise1"))
+            ]
+        )
+        
+        return ShowCategoryView(category: exampleCategory)
     }
 }
