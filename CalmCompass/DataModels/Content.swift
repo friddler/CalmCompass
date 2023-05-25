@@ -23,14 +23,15 @@ struct ArticleContent : Content {
 }
 
 struct MusicContent : Content {
- let id: String
- let title: String
- let imageName: String
- let contentInfo: String
- let musicFile: String
- 
- }
- 
+    let id: String
+    let title: String
+    let imageName: String
+    let contentInfo: String
+    let duration : TimeInterval
+    let musicFile: String
+    
+}
+
 struct ExerciseContent : Content {
     
     let id: String
@@ -39,6 +40,6 @@ struct ExerciseContent : Content {
     let contentInfo: String
     let videoURL: URL?
     
- }
+}
  
 

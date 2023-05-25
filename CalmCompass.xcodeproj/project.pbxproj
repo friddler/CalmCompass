@@ -27,8 +27,9 @@
 		0E7D7B0C2A0D5BD3007C7F33 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7D7B0B2A0D5BD3007C7F33 /* LottieView.swift */; };
 		0E7D7B0F2A0D5BF1007C7F33 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 0E7D7B0E2A0D5BF1007C7F33 /* Lottie */; };
 		0E7D7B122A122E10007C7F33 /* ShowCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7D7B112A122E10007C7F33 /* ShowCategoryView.swift */; };
+		0EC7EC222A1F687F0098F528 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC7EC212A1F687F0098F528 /* AudioManager.swift */; };
 		0ECBF93D2A1B573400B9EEBB /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECBF93C2A1B573400B9EEBB /* Content.swift */; };
-		0ECBF93F2A1B57BF00B9EEBB /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECBF93E2A1B57BE00B9EEBB /* ArticleView.swift */; };
+		0ECBF93F2A1B57BF00B9EEBB /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECBF93E2A1B57BE00B9EEBB /* MaterialView.swift */; };
 		0ECBF9472A1BB14500B9EEBB /* naturedark.json in Resources */ = {isa = PBXBuildFile; fileRef = 0ECBF9462A1BB14500B9EEBB /* naturedark.json */; };
 		0ECBF9492A1BB17000B9EEBB /* flowers.json in Resources */ = {isa = PBXBuildFile; fileRef = 0ECBF9482A1BB17000B9EEBB /* flowers.json */; };
 		0ECBF94B2A1BB19600B9EEBB /* nightsky.json in Resources */ = {isa = PBXBuildFile; fileRef = 0ECBF94A2A1BB19600B9EEBB /* nightsky.json */; };
@@ -81,8 +82,9 @@
 		0E7D7B082A0D5A09007C7F33 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		0E7D7B0B2A0D5BD3007C7F33 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		0E7D7B112A122E10007C7F33 /* ShowCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCategoryView.swift; sourceTree = "<group>"; };
+		0EC7EC212A1F687F0098F528 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		0ECBF93C2A1B573400B9EEBB /* Content.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
-		0ECBF93E2A1B57BE00B9EEBB /* ArticleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
+		0ECBF93E2A1B57BE00B9EEBB /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		0ECBF9462A1BB14500B9EEBB /* naturedark.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = naturedark.json; sourceTree = "<group>"; };
 		0ECBF9482A1BB17000B9EEBB /* flowers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = flowers.json; sourceTree = "<group>"; };
 		0ECBF94A2A1BB19600B9EEBB /* nightsky.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nightsky.json; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				0E7D7AF72A0D5650007C7F33 /* GoogleService-Info.plist */,
+				0EC7EC232A1F68860098F528 /* Managers */,
 				0E3D32002A13755500C9546D /* DataModels */,
 				0E7D7B0A2A0D5BB8007C7F33 /* LottieFiles */,
 				0E7D7B052A0D58E4007C7F33 /* Views */,
@@ -216,7 +219,7 @@
 				0E7D7AC72A0BADEF007C7F33 /* ContentView.swift */,
 				5AE6BFC92A1CE81B0029637E /* NotificationView.swift */,
 				B1EF1ECA2A14D9C500C58AAD /* LoginView.swift */,
-				0ECBF93E2A1B57BE00B9EEBB /* ArticleView.swift */,
+				0ECBF93E2A1B57BE00B9EEBB /* MaterialView.swift */,
 				0E4065FD2A1E305000184814 /* MusicView.swift */,
 				B1EF1EC92A14D9C500C58AAD /* SignUpView.swift */,
 				C7D0D2C82A121CA0001C2F42 /* HomeScreenView.swift */,
@@ -241,6 +244,14 @@
 				0ECBF9462A1BB14500B9EEBB /* naturedark.json */,
 			);
 			path = LottieFiles;
+			sourceTree = "<group>";
+		};
+		0EC7EC232A1F68860098F528 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				0EC7EC212A1F687F0098F528 /* AudioManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -398,8 +409,9 @@
 				0E7D7B092A0D5A09007C7F33 /* AuthViewModel.swift in Sources */,
 				0E7D7AC82A0BADEF007C7F33 /* ContentView.swift in Sources */,
 				0E7D7B0C2A0D5BD3007C7F33 /* LottieView.swift in Sources */,
+				0EC7EC222A1F687F0098F528 /* AudioManager.swift in Sources */,
 				5AE6BFC82A1CE7AC0029637E /* Navigation bar View.swift in Sources */,
-				0ECBF93F2A1B57BF00B9EEBB /* ArticleView.swift in Sources */,
+				0ECBF93F2A1B57BF00B9EEBB /* MaterialView.swift in Sources */,
 				C7D0D2C92A121CA0001C2F42 /* HomeScreenView.swift in Sources */,
 				0E4065FE2A1E305000184814 /* MusicView.swift in Sources */,
 				0E7D7B072A0D59E9007C7F33 /* FirestoreViewModel.swift in Sources */,

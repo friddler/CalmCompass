@@ -68,7 +68,7 @@ struct CategoryItemView: View {
     let categoryID: String
     
     var body: some View {
-        NavigationLink(destination: ArticleView(title: content.title, contentInfo: content.contentInfo, categoryID: categoryID)) {
+        NavigationLink(destination: MaterialView(title: content.title, contentInfo: content.contentInfo, categoryID: categoryID, content: content)) {
             VStack {
                 Image(content.imageName)
                     .resizable()
@@ -99,8 +99,8 @@ struct ShowCategoryView_Previews: PreviewProvider {
                 ArticleContent(id: "2", title: "Example Article 2", imageName: "SleepLogo", contentInfo: "Article 2 Info")
             ],
             musicContent: [
-                MusicContent(id: "1", title: "Example Music 1", imageName: "SleepLogo", contentInfo: "Music 1 Info", musicFile: "music1File"),
-                MusicContent(id: "2", title: "Example Music 2", imageName: "SleepLogo", contentInfo: "Music 2 Info", musicFile: "music2File")
+                MusicContent(id: "1", title: "Example Music 1", imageName: "SleepLogo", contentInfo: "Music 1 Info", duration: 70, musicFile: "music1File"),
+                MusicContent(id: "2", title: "Example Music 2", imageName: "SleepLogo", contentInfo: "Music 2 Info", duration: 70, musicFile: "music2File")
             ],
             exerciseContent: [
                 ExerciseContent(id: "1", title: "Example Exercise 1", imageName: "SleepLogo", contentInfo: "Exercise 1 Info", videoURL: URL(string: "https://example.com/exercise1"))
