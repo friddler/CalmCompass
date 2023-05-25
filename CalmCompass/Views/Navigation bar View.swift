@@ -11,6 +11,7 @@ enum Tab: String, CaseIterable {
     case house
     case person
     case gearshape
+    case map
     case rectanglePortraitAndArrowForward = "rectangle.portrait.and.arrow.forward"}
     struct Navigation_bar_View: View {
         
@@ -28,6 +29,8 @@ enum Tab: String, CaseIterable {
             case .person:
                 return Color.gray
             case .gearshape:
+                return Color.gray
+            case .map:
                 return Color.gray
             case .rectanglePortraitAndArrowForward:
                 return Color.gray

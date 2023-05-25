@@ -26,9 +26,10 @@ struct MapsView: View {
     var body: some View {
         VStack{
             Map(coordinateRegion: $region,
+                interactionModes: [.all],
                 annotationItems: places) { place in
                 //                MapMarker(coordinate: place.coordinate)
-                MapAnnotation(coordinate: place.coordinate){
+                MapAnnotation(coordinate: place.coordinate, anchorPoint: CGPoint(x: 0.5, y: 0.5)){
                     Button(action: {
                         selectedPlace =  place
                     }){
@@ -39,6 +40,7 @@ struct MapsView: View {
         }
         .sheet(item: $selectedPlace) { place in
             PlaceDetailView(selectedPlace: $selectedPlace, place: place)
+                .background(Color.clear)
                 }
     }
 }
@@ -61,24 +63,42 @@ struct PlaceDetailView: View {
     var place: Place
     
     var body: some View {
-        VStack {
-            Text(place.name)
-                .font(.title)
-            Text("Address: \(place.street) \(place.houseNumber), \(place.postalCode) \(place.City)")
-            Text("Latitude: \(place.latitude)")
-            Text("Longitude: \(place.longitude)")
-            
-            // Add any other information you want to display
-            
-            Button("Close") {
-                selectedPlace = nil
-            }
+        VStack{
+            Image("ForestView")
+                .resizable()
+                .scaledToFill()
+                .edgesIgnoringSafeArea(.all)
+                .overlay(
+                    VStack {
+                        RoundedRectangle(cornerRadius: 30, style: .continuous)
+                            .foregroundStyle(.linearGradient(colors: [.clear], startPoint: .topLeading, endPoint: .bottomTrailing))
+                            .frame(width:250, height:230)
+                            .overlay(
+                                VStack{
+                                    Text(place.name)
+                                        .font(.title)
+                                    Text("Address:")
+                                        .font(.headline)
+                                    Text("\(place.street) \(place.houseNumber)")
+                                    Text("\(place.postalCode) \(place.City)")
+                                    Text("Latitude: \(place.latitude)")
+                                    Text("Longitude: \(place.longitude)")
+                                }
+                                    .foregroundStyle(.linearGradient(colors: [.white], startPoint: .topLeading, endPoint: .bottomTrailing))
+                            )
+                        
+                    }
+                )
+            Spacer()
+            RoundedRectangle(cornerRadius: 30, style: .continuous)
+                .frame(width: 90, height: 30)
+                .foregroundStyle(.linearGradient(colors: [.purple, .blue], startPoint: .topLeading, endPoint: .bottomTrailing))
+                .overlay(Button("Close") {
+                    selectedPlace = nil
+                }.foregroundColor(.white))
         }
-        .padding()
     }
 }
-
-
 
 struct MapsView_Previews: PreviewProvider {
     static var previews: some View {
