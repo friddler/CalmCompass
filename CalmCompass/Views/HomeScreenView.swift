@@ -13,7 +13,9 @@ struct HomeScreenView: View {
     let categories: [Category] = Category.categories
     
     let columns = [GridItem(.adaptive(minimum: 170))]
+
     @State private var tabSelected: Tab = .house
+
     var body: some View {
         ScrollView{
             LazyVGrid(columns: columns, spacing: 10) {
@@ -36,11 +38,15 @@ struct HomeScreenView: View {
                     .navigationBarHidden(true)
                 }
                 
+
+            }.overlay(Navigation_bar_View(selectedTab: $tabSelected))
+
             }
             .padding()
             .background(Image("bgtest"))
             
-        }.overlay(Navigation_bar_View(selectedTab: $tabSelected))
+        }
+
     }
 }
     
