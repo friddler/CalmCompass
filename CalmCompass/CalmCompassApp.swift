@@ -26,7 +26,7 @@ struct CalmCompassApp: App {
     
     var body: some Scene {
         WindowGroup {
-            MapsView()
+            ContentView()
         }
     }
 }

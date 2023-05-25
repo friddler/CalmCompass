@@ -98,9 +98,9 @@ class AuthViewModel: ObservableObject {
         @State private var navigateToHome = false
         
         var auth = Auth.auth()
-        var isSignInButtonDisabled: Bool {
-            [email, password].contains(where: \.isEmpty)
-        }
+//        var isSignInButtonDisabled: Bool {
+//            [email, password].contains(where: \.isEmpty)
+//        }
         
         var body: some View {
             ZStack {
@@ -148,16 +148,17 @@ class AuthViewModel: ObservableObject {
                         .frame(width: 350, height: 1)
                         .foregroundColor(.white)
                     
-                    Button {
+                    Button(action: {
                         auth.signIn(withEmail: email, password: password) { result, error in
-                            if error != nil {
-                                print(error?.localizedDescription)
-                                //need navigation to HomeScreen after this
-                                
+                            if let error = error {
+                                print(error.localizedDescription)
+                                //login failed
+                            }else if result?.user != nil {
+                                //Login succesful
+                                navigateToHome = true
                             }
-                        }
-                        navigateToHome = true
-                    } label: {
+                            }
+                        }) {
                         Text("Login")
                             .bold()
                             .frame(width: 200, height: 40)
@@ -169,12 +170,7 @@ class AuthViewModel: ObservableObject {
                     }
                     .padding(.top)
                     .offset(y: 10)
-                    .background(
-                        isSignInButtonDisabled ? 
-                        LinearGradient(colors: [.white], startPoint: .topLeading, endPoint: .bottomTrailing) :
-                            LinearGradient(colors: [.white], startPoint: .topLeading, endPoint: .bottomTrailing)
-                    )
-                    .disabled(isSignInButtonDisabled)
+                    .disabled(email.isEmpty || password.isEmpty) // disable Button
                 }
                 .frame(width: 350)
             }
