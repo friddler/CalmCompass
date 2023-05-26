@@ -15,15 +15,37 @@ struct MusicView: View {
     let contentInfo: String
     let categoryID: String
     let musicContent: MusicContent
-   
+    
+    
+    @ViewBuilder
+    var backgroundColor: some View {
+        switch categoryID {
+        case "1": //happiness
+            Color(red: 199/255, green: 88/255, blue: 32/255)
+        case "2": //meditation
+            Color(red: 33/255, green: 26/255, blue: 89/255)
+        case "3": //stress
+            Color(red: 143/255, green: 106/255, blue: 76/255)
+        case "4": // sleep
+            Color(red: 20/255, green: 15/255, blue: 47/255)
+        case "5": //anxiety
+            Color(red: 31/255, green: 49/255, blue: 70/255)
+        case "6": //yoga
+            Color(red: 187/255, green: 102/255, blue: 102/255)
+        default:
+            Color(red: 28/255, green: 22/255, blue: 40/255)
+        }
+    }
+    
     
     var body: some View {
         VStack(spacing: 0) {
             
             animationCategoryChanger()
-                
+            
             ZStack {
-                Color(red: 28/255, green: 22/255, blue: 40/255)
+                
+                backgroundColor
                 
                 VStack(alignment: .leading, spacing: 24){
                     
@@ -69,146 +91,49 @@ struct MusicView: View {
     }
     
     @ViewBuilder
-    func animationCategoryChanger() -> some View{
+    func animationCategoryChanger() -> some View {
         if categoryID == "1" {
-            //happiness
-            AnyView(LottieView(loopMode: .loop, animationName: "sunrise")
-                .scaleEffect(1.2)
-                .frame(height: UIScreen.main.bounds.height / 2))
-            
+            // Happiness
+            AnyView(
+                LottieView(loopMode: .playOnce, animationName: "sunrise")
+                    .scaleEffect(1.8)
+                    .frame(width: 150)
+            )
         } else if categoryID == "2" {
-            //meditation
+            // Meditation
             AnyView(Text("hej"))
         } else if categoryID == "3" {
-            //stress
+            // Stress
             AnyView(
-                LottieView(loopMode: .loop, animationName: "stressnature")
-                    .scaleEffect(1.2)
-                    .frame(height: UIScreen.main.bounds.height / 2))
-                    
-            
+                LottieView(loopMode: .playOnce, animationName: "stressnature")
+                    .scaleEffect(0.4)
+                    .frame(width: 150, height: 426)
+            )
         } else if categoryID == "4" {
-            //sleep
+            // Sleep
             AnyView(
-                LottieView(loopMode: .loop, animationName: "nightsky")
-                    .scaleEffect(1.2)
-                    .frame(height: UIScreen.main.bounds.height / 2))
-            
+                LottieView(loopMode: .playOnce, animationName: "nightsky")
+                    .scaleEffect(0.4)
+                    .frame(width: 150, height: 426)
+            )
         } else if categoryID == "5" {
-            //anxiety
+            // Anxiety
             AnyView(
-                LottieView(loopMode: .loop, animationName: "hair")
-                    .scaleEffect(1.2)
-                    .frame(height: UIScreen.main.bounds.height / 2))
-            
-            
+                LottieView(loopMode: .playOnce, animationName: "hair")
+                    .padding(.horizontal)
+                    .frame(width: 150, height: 426)
+            )
         } else {
-            //yoga
+            // Yoga
             AnyView(
-                LottieView(loopMode: .loop, animationName: "yogapink")
-                    .scaleEffect(1.4)
-                    .padding(.top, 20)
-                    .frame(height: UIScreen.main.bounds.height / 2))
-            
+                LottieView(loopMode: .playOnce, animationName: "yogapink")
+                    .scaleEffect(1.42)
+                    .frame(width: 150, height: 426)
+            )
         }
-        
     }
-    
 }
 
-struct PlayerView : View {
-    
-    
-    @State var value: Double = 0.0
-    @Environment(\.dismiss) var dismiss
-    let musicContent: MusicContent
-    
-    var body: some View {
-        ZStack {
-            
-            Image(musicContent.imageName)
-                .resizable()
-                .scaledToFill()
-                .frame(width: UIScreen.main.bounds.width)
-                .ignoresSafeArea()
-            
-            VStack(spacing: 32) {
-                
-                HStack {
-                    Button {
-                        dismiss()
-                    } label: {
-                        Image(systemName: "xmark.circle.fill")
-                            .font(.system(size: 36))
-                            .foregroundColor(.white)
-                        
-                    }
-                    
-                    Spacer()
-                }
-                
-                Text(musicContent.title)
-                    .font(.title)
-                    .foregroundColor(.white)
-                
-                Spacer()
-                
-                VStack(spacing: 5) {
-                    Slider(value: $value, in: 0...60)
-                        .accentColor(.white)
-                    
-                    HStack {
-                        Text("0.00")
-                        
-                        Spacer()
-                        
-                        Text("1:00")
-                    }
-                    .font(.caption)
-                    .foregroundColor(.white)
-                }
-                
-                HStack {
-                    //repeat
-                    PlayBackControlButton(systemName: "repeat") {
-                        
-                    }
-                    
-                    Spacer()
-                    
-                    //backward
-                    PlayBackControlButton(systemName: "gobackward.10") {
-                        
-                    }
-                    Spacer()
-                    
-                    //play/pause
-                    PlayBackControlButton(systemName: "play.circle.fill", fontSize: 44) {
-                        
-                    }
-                    Spacer()
-                    
-                    //forward
-                    PlayBackControlButton(systemName: "goforward.10") {
-                        
-                    }
-                    
-                    Spacer()
-                    
-                    //stop
-                    PlayBackControlButton(systemName: "stop.fill") {
-                        
-                    }
-                }
-            }
-            .padding(20)
-        }
-        .onAppear {
-            AudioManager.shared.startPlayer(musicFile: musicContent.musicFile)
-        }
-        
-    }
-}
 
 struct PlayBackControlButton: View {
     
@@ -232,8 +157,8 @@ struct PlayBackControlButton: View {
 
 struct MusicView_Previews: PreviewProvider {
     static var previews: some View {
-       MusicView(title: "", contentInfo: "", categoryID: "3", musicContent: MusicContent(id: "1", title: "", imageName: "", contentInfo: "", duration: 70, musicFile: ""))
-//        PlayerView(musicContent: MusicContent(id: "", title: "", imageName: "", contentInfo: "", duration: 70, musicFile: ""))
+       MusicView(title: "", contentInfo: "", categoryID: "6", musicContent: MusicContent(id: "3", title: "", imageName: "", contentInfo: "", duration: 70, musicFile: ""))
+            .environmentObject(AudioManager())
         //PlayBackControlButton(action: {})
           //  .preferredColorScheme(.dark)
     }
