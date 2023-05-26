@@ -20,7 +20,7 @@ final class AudioManager {
         }
         
         do {
-            player = try AVAudioPlayer(contentsOf: url) //change this !
+            player = try AVAudioPlayer(contentsOf: url)
             player?.play()
         } catch  {
             print("fail to intitalize player", error)

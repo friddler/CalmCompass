@@ -20,10 +20,7 @@ struct MusicView: View {
     var body: some View {
         VStack(spacing: 0) {
             
-            LottieView(loopMode: .loop, animationName: "train")
-                .scaleEffect(0.4)
-                .padding(.bottom, 270)
-                .frame(height: UIScreen.main.bounds.height / 2)
+            animationCategoryChanger()
                 
             ZStack {
                 Color(red: 28/255, green: 22/255, blue: 40/255)
@@ -33,13 +30,13 @@ struct MusicView: View {
                     VStack(alignment: .leading, spacing: 8){
                         Text("Music")
                         
-                        Text("0s")
+                        Text(DateComponentsFormatter.abbreviated.string(from: musicContent.duration) ?? musicContent.duration.formatted() + "S")
                     }
                     .font(.subheadline)
                     .textCase(.uppercase)
                     .opacity(0.7)
                     
-                    Text("Here it can say something")
+                    Text(title)
                         .font(.title)
                     
                     Button {
@@ -55,7 +52,7 @@ struct MusicView: View {
                     }
                     
                     
-                    Text("Here it can say something about the music depending on the category")
+                    Text(contentInfo)
                     
                     Spacer()
                     
@@ -75,9 +72,8 @@ struct MusicView: View {
     func animationCategoryChanger() -> some View{
         if categoryID == "1" {
             //happiness
-            AnyView(LottieView(loopMode: .playOnce, animationName: "sunrise")
-                .scaleEffect(0.4)
-                .padding(.bottom, 270)
+            AnyView(LottieView(loopMode: .loop, animationName: "sunrise")
+                .scaleEffect(1.2)
                 .frame(height: UIScreen.main.bounds.height / 2))
             
         } else if categoryID == "2" {
@@ -87,31 +83,31 @@ struct MusicView: View {
             //stress
             AnyView(
                 LottieView(loopMode: .loop, animationName: "stressnature")
-                    .scaleEffect(0.4)
-                    .padding(.bottom, 270)
+                    .scaleEffect(1.2)
                     .frame(height: UIScreen.main.bounds.height / 2))
+                    
             
         } else if categoryID == "4" {
             //sleep
             AnyView(
                 LottieView(loopMode: .loop, animationName: "nightsky")
-                    .scaleEffect(0.4)
-                    .padding(.bottom, 270)
+                    .scaleEffect(1.2)
                     .frame(height: UIScreen.main.bounds.height / 2))
             
         } else if categoryID == "5" {
             //anxiety
             AnyView(
-                LottieView(loopMode: .playOnce, animationName: "hair")
-                    .scaleEffect(0.4)
-                    .padding(.bottom, 270)
+                LottieView(loopMode: .loop, animationName: "hair")
+                    .scaleEffect(1.2)
                     .frame(height: UIScreen.main.bounds.height / 2))
+            
+            
         } else {
             //yoga
             AnyView(
                 LottieView(loopMode: .loop, animationName: "yogapink")
-                    .scaleEffect(0.4)
-                    .padding(.bottom, 270)
+                    .scaleEffect(1.4)
+                    .padding(.top, 20)
                     .frame(height: UIScreen.main.bounds.height / 2))
             
         }
@@ -122,17 +118,19 @@ struct MusicView: View {
 
 struct PlayerView : View {
     
+    
     @State var value: Double = 0.0
     @Environment(\.dismiss) var dismiss
     let musicContent: MusicContent
     
     var body: some View {
         ZStack {
-            LottieView(loopMode: .loop, animationName: "train")
-                .scaleEffect(0.46)
-                .frame(width: 40, height: 40)
-                .ignoresSafeArea()
             
+            Image(musicContent.imageName)
+                .resizable()
+                .scaledToFill()
+                .frame(width: UIScreen.main.bounds.width)
+                .ignoresSafeArea()
             
             VStack(spacing: 32) {
                 
@@ -149,7 +147,7 @@ struct PlayerView : View {
                     Spacer()
                 }
                 
-                Text("1 minute relaxing meditation")
+                Text(musicContent.title)
                     .font(.title)
                     .foregroundColor(.white)
                 
@@ -202,8 +200,6 @@ struct PlayerView : View {
                         
                     }
                 }
-                
-                
             }
             .padding(20)
         }
@@ -236,8 +232,8 @@ struct PlayBackControlButton: View {
 
 struct MusicView_Previews: PreviewProvider {
     static var previews: some View {
-        MusicView(title: "", contentInfo: "", categoryID: "", musicContent: MusicContent(id: "1", title: "", imageName: "", contentInfo: "", duration: 70, musicFile: ""))
-        //PlayerView()
+       MusicView(title: "", contentInfo: "", categoryID: "3", musicContent: MusicContent(id: "1", title: "", imageName: "", contentInfo: "", duration: 70, musicFile: ""))
+//        PlayerView(musicContent: MusicContent(id: "", title: "", imageName: "", contentInfo: "", duration: 70, musicFile: ""))
         //PlayBackControlButton(action: {})
           //  .preferredColorScheme(.dark)
     }
