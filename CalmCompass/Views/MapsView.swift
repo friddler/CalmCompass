@@ -17,10 +17,13 @@ struct MapsView: View {
     var places =
     [
         Place(name: "Helags Friskvård", street: "Ljungdalen", houseNumber: "210", postalCode: 84599, City: "Ljungdalen", latitude: 62.8541509, longitude: 12.7827347),
+        Place(name: "ROMSjön", street: "Sjösvängen", houseNumber: "16", postalCode: 84599, City: "Funäsdalen", latitude: 62.5411867, longitude: 12.5141241),
         Place(name: "Stockholm", street: "Gotlandsgatan", houseNumber: "88", postalCode: 11638, City: "Stockholm", latitude: 59.3107017, longitude: 18.0855614),
+        Place(name: "Gamla Stan Thai Massage", street: "Skomakargatan", houseNumber: "26", postalCode: 11638, City: "Stockholm", latitude: 59.3246004, longitude: 18.0704384),
         Place(name: "Svensk Kroppsterapi", street: "Rinmansgatan", houseNumber: "9", postalCode: 63346, City: "Eskilstuna", latitude: 59.3826082, longitude: 16.5103790),
-        Place(name: "Psykologi Idrott Massage", street: "Skatåsvägen", houseNumber: "25", postalCode: 41655, City: "Göteborg", latitude: 57.7031101, longitude: 12.0376512)
-        
+        Place(name: "Effion Klassisk Massage ", street: "Västeråsvägen", houseNumber: "40A", postalCode: 63323, City: "Eskilstuna", latitude: 59.3745121, longitude: 16.4856495),
+        Place(name: "Psykologi Idrott Massage", street: "Skatåsvägen", houseNumber: "25", postalCode: 41655, City: "Göteborg", latitude: 57.7031101, longitude: 12.0376512),
+        Place(name: "Stellar Wellness", street: "LimstaängsvÄGEN", houseNumber: "2", postalCode: 87231, City: "Kramfors", latitude: 62.9326004, longitude: 17.7916838)
     ]
     
     var body: some View {
@@ -50,7 +53,7 @@ struct MapPinView : View{
     
     var body : some View {
        VStack {
-            Image(systemName: "house.fill")
+            Image(systemName: "mappin")
                 .resizable()
                 .frame(width: 20, height: 20)
             Text(place.name)
