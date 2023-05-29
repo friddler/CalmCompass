@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0E3D32022A13757E00C9546D /* CategoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3D32012A13757E00C9546D /* CategoryData.swift */; };
+		0E4065FE2A1E305000184814 /* MusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4065FD2A1E305000184814 /* MusicView.swift */; };
 		0E7D7AC62A0BADEF007C7F33 /* CalmCompassApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7D7AC52A0BADEF007C7F33 /* CalmCompassApp.swift */; };
 		0E7D7AC82A0BADEF007C7F33 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7D7AC72A0BADEF007C7F33 /* ContentView.swift */; };
 		0E7D7ACA2A0BADF0007C7F33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E7D7AC92A0BADF0007C7F33 /* Assets.xcassets */; };
@@ -26,6 +27,13 @@
 		0E7D7B0C2A0D5BD3007C7F33 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7D7B0B2A0D5BD3007C7F33 /* LottieView.swift */; };
 		0E7D7B0F2A0D5BF1007C7F33 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 0E7D7B0E2A0D5BF1007C7F33 /* Lottie */; };
 		0E7D7B122A122E10007C7F33 /* ShowCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7D7B112A122E10007C7F33 /* ShowCategoryView.swift */; };
+		0EC7EC222A1F687F0098F528 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC7EC212A1F687F0098F528 /* AudioManager.swift */; };
+		0EC7EC252A1F81680098F528 /* TheRoadAhead.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0EC7EC242A1F81680098F528 /* TheRoadAhead.mp3 */; };
+		0EC7EC272A1F83F20098F528 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC7EC262A1F83F20098F528 /* Extensions.swift */; };
+		0EC7EC292A1F8B6B0098F528 /* equil.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0EC7EC282A1F8B6B0098F528 /* equil.mp3 */; };
+		0EC7EC2C2A20D2AC0098F528 /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC7EC2B2A20D2AC0098F528 /* ArticleView.swift */; };
+		0EC7EC2E2A20D8520098F528 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC7EC2D2A20D8520098F528 /* PlayerView.swift */; };
+		0EC7EC302A20E5BA0098F528 /* meditation.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0EC7EC2F2A20E5BA0098F528 /* meditation.mp3 */; };
 		0ECBF93D2A1B573400B9EEBB /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECBF93C2A1B573400B9EEBB /* Content.swift */; };
 		0ECBF93F2A1B57BF00B9EEBB /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECBF93E2A1B57BE00B9EEBB /* MaterialView.swift */; };
 		0ECBF9472A1BB14500B9EEBB /* naturedark.json in Resources */ = {isa = PBXBuildFile; fileRef = 0ECBF9462A1BB14500B9EEBB /* naturedark.json */; };
@@ -65,6 +73,7 @@
 
 /* Begin PBXFileReference section */
 		0E3D32012A13757E00C9546D /* CategoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryData.swift; sourceTree = "<group>"; };
+		0E4065FD2A1E305000184814 /* MusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicView.swift; sourceTree = "<group>"; };
 		0E7D7AC22A0BADEF007C7F33 /* CalmCompass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalmCompass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E7D7AC52A0BADEF007C7F33 /* CalmCompassApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalmCompassApp.swift; sourceTree = "<group>"; };
 		0E7D7AC72A0BADEF007C7F33 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -80,6 +89,14 @@
 		0E7D7B082A0D5A09007C7F33 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		0E7D7B0B2A0D5BD3007C7F33 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		0E7D7B112A122E10007C7F33 /* ShowCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCategoryView.swift; sourceTree = "<group>"; };
+		0EC7EC212A1F687F0098F528 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		0EC7EC242A1F81680098F528 /* TheRoadAhead.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TheRoadAhead.mp3; sourceTree = "<group>"; };
+		0EC7EC262A1F83F20098F528 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		0EC7EC282A1F8B6B0098F528 /* equil.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = equil.mp3; sourceTree = "<group>"; };
+		0EC7EC2A2A20D1630098F528 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		0EC7EC2B2A20D2AC0098F528 /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
+		0EC7EC2D2A20D8520098F528 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		0EC7EC2F2A20E5BA0098F528 /* meditation.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = meditation.mp3; sourceTree = "<group>"; };
 		0ECBF93C2A1B573400B9EEBB /* Content.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		0ECBF93E2A1B57BE00B9EEBB /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		0ECBF9462A1BB14500B9EEBB /* naturedark.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = naturedark.json; sourceTree = "<group>"; };
@@ -163,13 +180,19 @@
 		0E7D7AC42A0BADEF007C7F33 /* CalmCompass */ = {
 			isa = PBXGroup;
 			children = (
+				0EC7EC2A2A20D1630098F528 /* Info.plist */,
 				0E7D7AF72A0D5650007C7F33 /* GoogleService-Info.plist */,
+				0EC7EC262A1F83F20098F528 /* Extensions.swift */,
+				0EC7EC232A1F68860098F528 /* Managers */,
 				0E3D32002A13755500C9546D /* DataModels */,
 				0E7D7B0A2A0D5BB8007C7F33 /* LottieFiles */,
 				0E7D7B052A0D58E4007C7F33 /* Views */,
 				0E7D7B042A0D58DB007C7F33 /* ViewModels */,
 				0E7D7AC52A0BADEF007C7F33 /* CalmCompassApp.swift */,
 				0E7D7AC92A0BADF0007C7F33 /* Assets.xcassets */,
+				0EC7EC282A1F8B6B0098F528 /* equil.mp3 */,
+				0EC7EC2F2A20E5BA0098F528 /* meditation.mp3 */,
+				0EC7EC242A1F81680098F528 /* TheRoadAhead.mp3 */,
 				0E7D7ACB2A0BADF0007C7F33 /* Preview Content */,
 			);
 			path = CalmCompass;
@@ -217,6 +240,9 @@
 				5AE6BFC92A1CE81B0029637E /* NotificationView.swift */,
 				B1EF1ECA2A14D9C500C58AAD /* LoginView.swift */,
 				0ECBF93E2A1B57BE00B9EEBB /* MaterialView.swift */,
+				0E4065FD2A1E305000184814 /* MusicView.swift */,
+				0EC7EC2D2A20D8520098F528 /* PlayerView.swift */,
+				0EC7EC2B2A20D2AC0098F528 /* ArticleView.swift */,
 				B1EF1EC92A14D9C500C58AAD /* SignUpView.swift */,
 				C7D0D2C82A121CA0001C2F42 /* HomeScreenView.swift */,
 				0E7D7B112A122E10007C7F33 /* ShowCategoryView.swift */,
@@ -241,6 +267,14 @@
 				0ECBF9462A1BB14500B9EEBB /* naturedark.json */,
 			);
 			path = LottieFiles;
+			sourceTree = "<group>";
+		};
+		0EC7EC232A1F68860098F528 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				0EC7EC212A1F687F0098F528 /* AudioManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,7 +393,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EC7EC302A20E5BA0098F528 /* meditation.mp3 in Resources */,
 				0ECBF9472A1BB14500B9EEBB /* naturedark.json in Resources */,
+				0EC7EC252A1F81680098F528 /* TheRoadAhead.mp3 in Resources */,
 				0ECBF9492A1BB17000B9EEBB /* flowers.json in Resources */,
 				0E7D7ACD2A0BADF0007C7F33 /* Preview Assets.xcassets in Resources */,
 				0ECBF9572A1E0BF100B9EEBB /* sunrise.json in Resources */,
@@ -368,6 +404,7 @@
 				0ECBF94B2A1BB19600B9EEBB /* nightsky.json in Resources */,
 				0ECBF9552A1E096000B9EEBB /* stressnature.json in Resources */,
 				0ECBF9532A1CEF8800B9EEBB /* hair.json in Resources */,
+				0EC7EC292A1F8B6B0098F528 /* equil.mp3 in Resources */,
 				0ECBF94D2A1BB1B300B9EEBB /* moon.json in Resources */,
 				0E7D7ACA2A0BADF0007C7F33 /* Assets.xcassets in Resources */,
 				0ECBF94F2A1BBF2C00B9EEBB /* train.json in Resources */,
@@ -396,11 +433,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E7D7B092A0D5A09007C7F33 /* AuthViewModel.swift in Sources */,
+				0EC7EC272A1F83F20098F528 /* Extensions.swift in Sources */,
 				0E7D7AC82A0BADEF007C7F33 /* ContentView.swift in Sources */,
 				0E7D7B0C2A0D5BD3007C7F33 /* LottieView.swift in Sources */,
+				0EC7EC222A1F687F0098F528 /* AudioManager.swift in Sources */,
 				5AE6BFC82A1CE7AC0029637E /* Navigation bar View.swift in Sources */,
 				0ECBF93F2A1B57BF00B9EEBB /* MaterialView.swift in Sources */,
 				C7D0D2C92A121CA0001C2F42 /* HomeScreenView.swift in Sources */,
+				0E4065FE2A1E305000184814 /* MusicView.swift in Sources */,
 				0E7D7B072A0D59E9007C7F33 /* FirestoreViewModel.swift in Sources */,
 				C7F513882A14E286001C1AEE /* ProfilePageView.swift in Sources */,
 				0E7D7AC62A0BADEF007C7F33 /* CalmCompassApp.swift in Sources */,
@@ -408,7 +448,9 @@
 				0E7D7B122A122E10007C7F33 /* ShowCategoryView.swift in Sources */,
 				B1EF1ECB2A14D9C500C58AAD /* SignUpView.swift in Sources */,
 				B1EF1ECC2A14D9C500C58AAD /* LoginView.swift in Sources */,
+				0EC7EC2C2A20D2AC0098F528 /* ArticleView.swift in Sources */,
 				0E3D32022A13757E00C9546D /* CategoryData.swift in Sources */,
+				0EC7EC2E2A20D8520098F528 /* PlayerView.swift in Sources */,
 				0ECBF93D2A1B573400B9EEBB /* Content.swift in Sources */,
 				5AE6BFCA2A1CE81B0029637E /* NotificationView.swift in Sources */,
 			);
@@ -572,6 +614,7 @@
 				DEVELOPMENT_TEAM = 8U9A4A64L9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CalmCompass/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -601,6 +644,7 @@
 				DEVELOPMENT_TEAM = 8U9A4A64L9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CalmCompass/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
