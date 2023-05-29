@@ -47,9 +47,8 @@
 		0ECBF9572A1E0BF100B9EEBB /* sunrise.json in Resources */ = {isa = PBXBuildFile; fileRef = 0ECBF9562A1E0BF100B9EEBB /* sunrise.json */; };
 		5AE6BFC82A1CE7AC0029637E /* Navigation bar View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE6BFC72A1CE7AC0029637E /* Navigation bar View.swift */; };
 		5AE6BFCA2A1CE81B0029637E /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE6BFC92A1CE81B0029637E /* NotificationView.swift */; };
-		B1EF1ECB2A14D9C500C58AAD /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EF1EC92A14D9C500C58AAD /* SignUpView.swift */; };
-		B1EF1ECC2A14D9C500C58AAD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EF1ECA2A14D9C500C58AAD /* LoginView.swift */; };
 		C793CA862A1E511F000B7760 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C793CA852A1E511F000B7760 /* SettingsView.swift */; };
+		C793CAA32A24B782000B7760 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C793CAA22A24B782000B7760 /* ThemeManager.swift */; };
 		C7D0D2C92A121CA0001C2F42 /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D0D2C82A121CA0001C2F42 /* HomeScreenView.swift */; };
 		C7F513882A14E286001C1AEE /* ProfilePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F513872A14E286001C1AEE /* ProfilePageView.swift */; };
 /* End PBXBuildFile section */
@@ -110,9 +109,8 @@
 		0ECBF9562A1E0BF100B9EEBB /* sunrise.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sunrise.json; sourceTree = "<group>"; };
 		5AE6BFC72A1CE7AC0029637E /* Navigation bar View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Navigation bar View.swift"; sourceTree = "<group>"; };
 		5AE6BFC92A1CE81B0029637E /* NotificationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
-		B1EF1EC92A14D9C500C58AAD /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
-		B1EF1ECA2A14D9C500C58AAD /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C793CA852A1E511F000B7760 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		C793CAA22A24B782000B7760 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		C7D0D2C82A121CA0001C2F42 /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		C7F513872A14E286001C1AEE /* ProfilePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -238,12 +236,10 @@
 				5AE6BFC72A1CE7AC0029637E /* Navigation bar View.swift */,
 				0E7D7AC72A0BADEF007C7F33 /* ContentView.swift */,
 				5AE6BFC92A1CE81B0029637E /* NotificationView.swift */,
-				B1EF1ECA2A14D9C500C58AAD /* LoginView.swift */,
 				0ECBF93E2A1B57BE00B9EEBB /* MaterialView.swift */,
 				0E4065FD2A1E305000184814 /* MusicView.swift */,
 				0EC7EC2D2A20D8520098F528 /* PlayerView.swift */,
 				0EC7EC2B2A20D2AC0098F528 /* ArticleView.swift */,
-				B1EF1EC92A14D9C500C58AAD /* SignUpView.swift */,
 				C7D0D2C82A121CA0001C2F42 /* HomeScreenView.swift */,
 				0E7D7B112A122E10007C7F33 /* ShowCategoryView.swift */,
 				C7F513872A14E286001C1AEE /* ProfilePageView.swift */,
@@ -273,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				0EC7EC212A1F687F0098F528 /* AudioManager.swift */,
+				C793CAA22A24B782000B7760 /* ThemeManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -439,6 +436,7 @@
 				0EC7EC222A1F687F0098F528 /* AudioManager.swift in Sources */,
 				5AE6BFC82A1CE7AC0029637E /* Navigation bar View.swift in Sources */,
 				0ECBF93F2A1B57BF00B9EEBB /* MaterialView.swift in Sources */,
+				C793CAA32A24B782000B7760 /* ThemeManager.swift in Sources */,
 				C7D0D2C92A121CA0001C2F42 /* HomeScreenView.swift in Sources */,
 				0E4065FE2A1E305000184814 /* MusicView.swift in Sources */,
 				0E7D7B072A0D59E9007C7F33 /* FirestoreViewModel.swift in Sources */,
@@ -446,8 +444,6 @@
 				0E7D7AC62A0BADEF007C7F33 /* CalmCompassApp.swift in Sources */,
 				C793CA862A1E511F000B7760 /* SettingsView.swift in Sources */,
 				0E7D7B122A122E10007C7F33 /* ShowCategoryView.swift in Sources */,
-				B1EF1ECB2A14D9C500C58AAD /* SignUpView.swift in Sources */,
-				B1EF1ECC2A14D9C500C58AAD /* LoginView.swift in Sources */,
 				0EC7EC2C2A20D2AC0098F528 /* ArticleView.swift in Sources */,
 				0E3D32022A13757E00C9546D /* CategoryData.swift in Sources */,
 				0EC7EC2E2A20D8520098F528 /* PlayerView.swift in Sources */,
