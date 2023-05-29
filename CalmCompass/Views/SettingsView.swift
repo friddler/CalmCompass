@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @EnvironmentObject var themeManager: ThemeManager
     @State private var tabSelected: Tab = .gearshape
     @State private var notificationsEnabled = true
-    @State private var darkModeEnabled = true
     
     var body: some View {
         NavigationView {
@@ -22,7 +22,7 @@ struct SettingsView: View {
                             Text("Notifications")
                         })
                         
-                        Toggle(isOn: $darkModeEnabled, label: {
+                        Toggle(isOn: $themeManager.isDarkMode, label: {
                             Text("Dark mode")
                         })
                     }
@@ -33,11 +33,13 @@ struct SettingsView: View {
             .navigationBarTitle("Settings")
         }
         .overlay(Navigation_bar_View(selectedTab: $tabSelected))
+        .environment(\.colorScheme, themeManager.isDarkMode ? .dark : .light)
     }
 }
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsView()
+            .environmentObject(ThemeManager.shared)
     }
 }

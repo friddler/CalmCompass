@@ -7,17 +7,13 @@
 import SwiftUI
 
 struct HomeScreenView: View {
-    
-    //var data: [Int] = Array(1...6)
-   // let images = ["HapinessLogo","MeditationLogo","ReduceStressLogo","SleepLogo","anxietyLogo","Yoga"]
+    @EnvironmentObject var themeManager: ThemeManager
     let categories: [Category] = Category.categories
-    
     let columns = [GridItem(.adaptive(minimum: 170))]
-
     @State private var tabSelected: Tab = .house
 
     var body: some View {
-        ScrollView{
+        ScrollView {
             LazyVGrid(columns: columns, spacing: 10) {
                 ForEach(categories, id: \.id) { category in
                     NavigationLink(destination: ShowCategoryView(category: category)) {
@@ -37,21 +33,21 @@ struct HomeScreenView: View {
                     .navigationBarBackButtonHidden(true)
                     .navigationBarHidden(true)
                 }
-                
-
-            }.overlay(Navigation_bar_View(selectedTab: $tabSelected))
-
             }
             .padding()
-            .background(Image("bgtest"))
-            
         }
-
+        .overlay(Navigation_bar_View(selectedTab: $tabSelected))
+        .onAppear {
+            themeManager.handleTheme()
+        }
+        .environment(\.colorScheme, themeManager.isDarkMode ? .dark : .light)
+        .background(Image("bgtest"))
     }
 
-    
-struct HomeScreenView_Previews: PreviewProvider {
+    struct HomeScreenView_Previews: PreviewProvider {
         static var previews: some View {
             HomeScreenView()
+                .environmentObject(ThemeManager.shared)
         }
     }
+}
