@@ -21,6 +21,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 struct CalmCompassApp: App {
     
     @StateObject var audioManager = AudioManager()
+    @StateObject var themeManager = ThemeManager.shared
     
     init(){
         FirebaseApp.configure()
@@ -30,6 +31,7 @@ struct CalmCompassApp: App {
         WindowGroup {
             ContentView()
                 .environmentObject(audioManager)
+                .environmentObject(themeManager)
         }
     }
 }
