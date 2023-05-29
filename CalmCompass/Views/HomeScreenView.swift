@@ -11,7 +11,7 @@ struct HomeScreenView: View {
     let categories: [Category] = Category.categories
     let columns = [GridItem(.adaptive(minimum: 170))]
     @State private var tabSelected: Tab = .house
-
+    
     var body: some View {
         ScrollView {
             LazyVGrid(columns: columns, spacing: 10) {
@@ -43,11 +43,12 @@ struct HomeScreenView: View {
         .environment(\.colorScheme, themeManager.isDarkMode ? .dark : .light)
         .background(Image("bgtest"))
     }
-
+}
+    
     struct HomeScreenView_Previews: PreviewProvider {
         static var previews: some View {
             HomeScreenView()
                 .environmentObject(ThemeManager.shared)
         }
     }
-}
+    

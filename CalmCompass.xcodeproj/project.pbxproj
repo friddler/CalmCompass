@@ -34,6 +34,9 @@
 		0EC7EC2C2A20D2AC0098F528 /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC7EC2B2A20D2AC0098F528 /* ArticleView.swift */; };
 		0EC7EC2E2A20D8520098F528 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC7EC2D2A20D8520098F528 /* PlayerView.swift */; };
 		0EC7EC302A20E5BA0098F528 /* meditation.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0EC7EC2F2A20E5BA0098F528 /* meditation.mp3 */; };
+		0EC7EC322A24CCF20098F528 /* MapsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC7EC312A24CCF20098F528 /* MapsView.swift */; };
+		0EC7EC342A24CD120098F528 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC7EC332A24CD120098F528 /* Place.swift */; };
+		0EC7EC362A24E16F0098F528 /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC7EC352A24E16F0098F528 /* ExerciseView.swift */; };
 		0ECBF93D2A1B573400B9EEBB /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECBF93C2A1B573400B9EEBB /* Content.swift */; };
 		0ECBF93F2A1B57BF00B9EEBB /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECBF93E2A1B57BE00B9EEBB /* MaterialView.swift */; };
 		0ECBF9472A1BB14500B9EEBB /* naturedark.json in Resources */ = {isa = PBXBuildFile; fileRef = 0ECBF9462A1BB14500B9EEBB /* naturedark.json */; };
@@ -96,6 +99,9 @@
 		0EC7EC2B2A20D2AC0098F528 /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
 		0EC7EC2D2A20D8520098F528 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		0EC7EC2F2A20E5BA0098F528 /* meditation.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = meditation.mp3; sourceTree = "<group>"; };
+		0EC7EC312A24CCF20098F528 /* MapsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapsView.swift; path = CalmCompass/Views/MapsView.swift; sourceTree = SOURCE_ROOT; };
+		0EC7EC332A24CD120098F528 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		0EC7EC352A24E16F0098F528 /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
 		0ECBF93C2A1B573400B9EEBB /* Content.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		0ECBF93E2A1B57BE00B9EEBB /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		0ECBF9462A1BB14500B9EEBB /* naturedark.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = naturedark.json; sourceTree = "<group>"; };
@@ -150,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				0E3D32012A13757E00C9546D /* CategoryData.swift */,
+				0EC7EC332A24CD120098F528 /* Place.swift */,
 				0ECBF93C2A1B573400B9EEBB /* Content.swift */,
 			);
 			path = DataModels;
@@ -236,6 +243,7 @@
 				5AE6BFC72A1CE7AC0029637E /* Navigation bar View.swift */,
 				0E7D7AC72A0BADEF007C7F33 /* ContentView.swift */,
 				5AE6BFC92A1CE81B0029637E /* NotificationView.swift */,
+				0EC7EC312A24CCF20098F528 /* MapsView.swift */,
 				0ECBF93E2A1B57BE00B9EEBB /* MaterialView.swift */,
 				0E4065FD2A1E305000184814 /* MusicView.swift */,
 				0EC7EC2D2A20D8520098F528 /* PlayerView.swift */,
@@ -244,6 +252,7 @@
 				0E7D7B112A122E10007C7F33 /* ShowCategoryView.swift */,
 				C7F513872A14E286001C1AEE /* ProfilePageView.swift */,
 				C793CA852A1E511F000B7760 /* SettingsView.swift */,
+				0EC7EC352A24E16F0098F528 /* ExerciseView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -433,14 +442,17 @@
 				0EC7EC272A1F83F20098F528 /* Extensions.swift in Sources */,
 				0E7D7AC82A0BADEF007C7F33 /* ContentView.swift in Sources */,
 				0E7D7B0C2A0D5BD3007C7F33 /* LottieView.swift in Sources */,
+				0EC7EC362A24E16F0098F528 /* ExerciseView.swift in Sources */,
 				0EC7EC222A1F687F0098F528 /* AudioManager.swift in Sources */,
 				5AE6BFC82A1CE7AC0029637E /* Navigation bar View.swift in Sources */,
 				0ECBF93F2A1B57BF00B9EEBB /* MaterialView.swift in Sources */,
 				C793CAA32A24B782000B7760 /* ThemeManager.swift in Sources */,
 				C7D0D2C92A121CA0001C2F42 /* HomeScreenView.swift in Sources */,
+				0EC7EC342A24CD120098F528 /* Place.swift in Sources */,
 				0E4065FE2A1E305000184814 /* MusicView.swift in Sources */,
 				0E7D7B072A0D59E9007C7F33 /* FirestoreViewModel.swift in Sources */,
 				C7F513882A14E286001C1AEE /* ProfilePageView.swift in Sources */,
+				0EC7EC322A24CCF20098F528 /* MapsView.swift in Sources */,
 				0E7D7AC62A0BADEF007C7F33 /* CalmCompassApp.swift in Sources */,
 				C793CA862A1E511F000B7760 /* SettingsView.swift in Sources */,
 				0E7D7B122A122E10007C7F33 /* ShowCategoryView.swift in Sources */,
