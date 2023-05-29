@@ -27,13 +27,13 @@ enum Tab: String, CaseIterable {
         private var tabColor: Color {
             switch selectedTab {
             case .house:
-            return Color.gray
+            return Color.blue
             case .person:
-            return Color.gray
+            return Color.orange
             case .gearshape:
-                return Color.gray
+                return Color.purple
             case .map:
-                return Color.gray
+                return Color.green
             case .rectanglePortraitAndArrowForward:
             return Color.gray
                 
