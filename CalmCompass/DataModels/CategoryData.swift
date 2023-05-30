@@ -23,7 +23,7 @@ struct Category {
         ], musicContent: [
             MusicContent(id: "musicH1", title: "Mood Booster", imageName: "music1", contentInfo: "Feel the uplifting rhythm and let happiness fill your heart.", duration: 215, musicFile: "TheRoadAhead")
         ], exerciseContent: [
-            ExerciseContent(id: "exerciseH1", title: "Exercise content", imageName: "hapinessLogo", contentInfo: "", videoURL: URL(string: "https://example.com/exerciseH1"))
+            ExerciseContent(id: "exerciseH1", title: "The Happy Hormone", imageName: "hapinessLogo", contentInfo: "12 Ways To Naturally Boost Dopamine (The Happy Hormone) From content creator BRAINY DOSE on youtube.", videoURL: URL(string: "https://www.youtube.com/watch?v=esB7YblpnRo"))
         ]),
         
         Category(id: "2", title: "Meditation", imageName: "MeditationLogo", articleContent: [
@@ -41,7 +41,7 @@ struct Category {
         ], musicContent: [
             MusicContent(id: "musicS1", title: "Tranquility", imageName: "ReduceStressLogo", contentInfo: "Close your eyes and drift away, let the soothing melodies embrace you.", duration: 906, musicFile: "equil")
         ], exerciseContent: [
-            ExerciseContent(id: "exerciseS1", title: "Exercise content Stress", imageName: "ReduceStressLogo", contentInfo: "", videoURL: URL(string: "https://example.com/exerciseS1"))
+            ExerciseContent(id: "exerciseS1", title: "Clear The Clutter", imageName: "ReduceStressLogo", contentInfo: "20 Minute Guided Meditation for Reducing Anxiety and Stress--Clear the Clutter to Calm Down. From content creator The Mindful Movement on youtube.", videoURL: URL(string: "MIr3RsUWrdo"))
         ]),
         
         Category(id: "4", title: "Sleep", imageName: "SleepLogo", articleContent: [
@@ -50,7 +50,7 @@ struct Category {
         ], musicContent: [
             MusicContent(id: "musicSL1", title: "Music content Sleep", imageName: "SleepLogo", contentInfo: "This is music test Sleep 1", duration: 70, musicFile: "musicSL1.mp3")
         ], exerciseContent: [
-            ExerciseContent(id: "exerciseSL1", title: "Exercise content Sleep", imageName: "SleepLogo", contentInfo: "", videoURL: URL(string: "https://example.com/exerciseSL1"))
+            ExerciseContent(id: "exerciseSL1", title: "Fall asleep fast", imageName: "SleepLogo", contentInfo: "Fall Asleep In MINUTES! Sleep Talk-Down Guided Meditation Hypnosis for Sleeping. From content creator Jason Stephenson on youtube.", videoURL: URL(string: "https://www.youtube.com/watch?v=U6Ay9v7gK9w&t=7597s"))
         ]),
         
         Category(id: "5", title: "Anxiety", imageName: "anxietyLogo", articleContent: [
@@ -59,7 +59,7 @@ struct Category {
         ], musicContent: [
             MusicContent(id: "musicA1", title: "Music content anxiety", imageName: "anxietyLogo", contentInfo: "This is music test 1 anxiety", duration: 70, musicFile: "musicA1.mp3")
         ], exerciseContent: [
-            ExerciseContent(id: "exerciseA1", title: "Exercise content anxiety", imageName: "anxietyLogo", contentInfo: "", videoURL: URL(string: "https://example.com/exerciseA1"))
+            ExerciseContent(id: "exerciseA1", title: "Surrender session", imageName: "anxietyLogo", contentInfo: "Guided Meditation For Anxiety | SURRENDER SESSION | Letting Go | From content creator The Anxiety Guy on youtube.", videoURL: URL(string: "https://www.youtube.com/watch?v=6arfMc9Aj4k"))
         ]),
         
         Category(id: "6", title: "Yoga", imageName: "yoga", articleContent: [
@@ -68,7 +68,7 @@ struct Category {
         ], musicContent: [
             MusicContent(id: "musicY1", title: "Music content yoga", imageName: "yoga", contentInfo: "This is music test 1 yoga", duration: 70, musicFile: "musicY1.mp3")
         ], exerciseContent: [
-            ExerciseContent(id: "exerciseY1", title: "Exercise content yoga", imageName: "yoga", contentInfo: "", videoURL: URL(string: "https://example.com/exerciseY1"))
+            ExerciseContent(id: "exerciseY1", title: "Energy Yoga Flow", imageName: "yoga", contentInfo: "20 min Morning Yoga Workout - Strength & Energy Yoga Flow. From content creator Yoga with Kassandra on youtube.", videoURL: URL(string: "https://www.youtube.com/watch?v=CM43AZaRXNw"))
         ])
     ]
 }
