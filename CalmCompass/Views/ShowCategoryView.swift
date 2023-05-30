@@ -103,7 +103,7 @@ struct ShowCategoryView_Previews: PreviewProvider {
                 MusicContent(id: "2", title: "Example Music 2", imageName: "SleepLogo", contentInfo: "Music 2 Info", duration: 70, musicFile: "music2File")
             ],
             exerciseContent: [
-                ExerciseContent(id: "1", title: "Example Exercise 1", imageName: "SleepLogo", contentInfo: "Exercise 1 Info", videoURL: URL(string: "https://example.com/exercise1"))
+                ExerciseContent(id: "1", title: "Example Exercise 1", imageName: "SleepLogo", contentInfo: "Exercise 1 Info", videoURL: "https://example.com/exercise1")
             ]
         )
         

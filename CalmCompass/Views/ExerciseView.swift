@@ -18,9 +18,11 @@ struct ExerciseView: View {
     var body: some View {
         VStack {
             
+            VideoView(videoURL: exerciseContent.videoURL)
+                .padding(.bottom, -10)
     
             
-            VStack {
+            ZStack {
                 
                 Color(red: 31/255, green: 49/255, blue: 70/255)
                 
@@ -48,26 +50,29 @@ struct ExerciseView: View {
                 .padding(20)
                 
             }
+
         }
+        .ignoresSafeArea(.all)
     }
 }
 
 struct VideoView: UIViewRepresentable {
     
-    let exerciseContent : ExerciseContent
+    let videoURL: String
     
     func makeUIView(context: Context) -> WKWebView {
         return WKWebView()
     }
     
     func updateUIView(_ uiView: WKWebView, context: Context) {
-        guard let videoURL = URL(string: "https://www.youtube.com/embed/\(String(describing: exerciseContent.videoURL))") else {return}
-        uiView.load(URLRequest(url: videoURL))
+        guard let youtubeURL = URL(string: "https://www.youtube.com/embed/\(videoURL)") else { return }
+                uiView.scrollView.isScrollEnabled = false
+                uiView.load(URLRequest(url: youtubeURL))
     }
 }
 
 struct ExerciseView_Previews: PreviewProvider {
     static var previews: some View {
-        ExerciseView(title: "Exercise 1", contentInfo: "This is a exercise", categoryID: "1", exerciseContent: ExerciseContent(id: "", title: "", imageName: "", contentInfo: "", videoURL: URL(string: "https://www.youtube.com/watch?v=CM43AZaRXNw")))
+        ExerciseView(title: "Exercise 1", contentInfo: "This is a exercise", categoryID: "1", exerciseContent: ExerciseContent(id: "", title: "", imageName: "", contentInfo: "", videoURL: "https://www.youtube.com/watch?v=CM43AZaRXNw"))
     }
 }

@@ -38,7 +38,7 @@ struct ExerciseContent : Content {
     let title: String
     let imageName: String
     let contentInfo: String
-    let videoURL: URL?
+    let videoURL: String
     
 }
  
