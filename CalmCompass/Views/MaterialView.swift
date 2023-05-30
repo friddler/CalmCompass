@@ -16,11 +16,11 @@ struct MaterialView: View {
   
     
     var body: some View {
-        ZStack {
+        VStack {
             if let musicContent = content as? MusicContent {
                 MusicView(title: title, contentInfo: contentInfo, categoryID: categoryID, musicContent: musicContent)
-            } else if content is ExerciseContent {
-                //exerciseview
+            } else if let exerciseContent = content as? ExerciseContent {
+                ExerciseView(title: title, contentInfo: contentInfo, categoryID: categoryID, exerciseContent: exerciseContent)
             } else {
                 ArticleView(title: title, contentInfo: contentInfo, categoryID: categoryID)
             }
