@@ -17,7 +17,7 @@ struct ProfilePageView: View {
     @State private var editedUsername = ""
     @State private var username: String = ""
     @State private var email: String = ""
-    @State private var tabSelected: Tab = .person
+    @State private var selectedTab: Tab = .person
     
     let db = Firestore.firestore()
     
@@ -69,12 +69,12 @@ struct ProfilePageView: View {
                                 .foregroundColor(.white)
                                             .font(.system(size: 24))) {
                                 
-                                Text("Johanna Doe")
+                                Text(username)
                             }
                             Section(header: Image(systemName: "envelope")
                                 .foregroundColor(.white)
                                             .font(.system(size: 24))) { // Increase the font size here
-                                Text("johannadoe@hotmail.com")
+                                Text(email)
                             }
                         }
                         .scrollContentBackground(.hidden)
@@ -99,7 +99,7 @@ struct ProfilePageView: View {
                     Spacer().frame(height: 100)
                 }
             }
-            .overlay(Navigation_bar_View(selectedTab: $tabSelected))
+            .overlay(Navigation_bar_View(selectedTab: $selectedTab))
         }
         .onAppear {
             fetchUserData()

@@ -10,7 +10,7 @@ struct HomeScreenView: View {
     @EnvironmentObject var themeManager: ThemeManager
     let categories: [Category] = Category.categories
     let columns = [GridItem(.adaptive(minimum: 170))]
-    @State private var tabSelected: Tab = .house
+    @State private var selectedTab: Tab = .house
     
     var body: some View {
         ScrollView {
@@ -36,7 +36,7 @@ struct HomeScreenView: View {
             }
             .padding()
         }
-        .overlay(Navigation_bar_View(selectedTab: $tabSelected))
+        .overlay(Navigation_bar_View(selectedTab: $selectedTab))
         .onAppear {
             themeManager.handleTheme()
         }
