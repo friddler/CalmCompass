@@ -116,7 +116,12 @@ struct ProfilePageView: View {
             if let document = document, document.exists {
                 let data = document.data()
                 username = data?["username"] as? String ?? ""
-                email = data?["email"] as? String ?? ""
+                
+                Auth.auth().currentUser?.providerData.forEach { userInfo in
+                    if userInfo.providerID == "password" {
+                        email = userInfo.email ?? ""
+                    }
+                }
             } else {
                 print("Document does not exist")
             }
