@@ -32,6 +32,7 @@ struct ShowCategoryView: View {
             
         }
         .edgesIgnoringSafeArea(.all)
+        .background(Image("bgtest"))
         
     }
     
