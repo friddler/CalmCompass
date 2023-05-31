@@ -10,7 +10,7 @@ import SwiftUI
 struct SettingsView: View {
     @EnvironmentObject var themeManager: ThemeManager
     @State private var selectedTab: Tab = .gearshape
-    @State private var notificationsEnabled = true
+    @AppStorage("notificationsEnabled") private var notificationsEnabled = true
     
     var body: some View {
         NavigationView {
@@ -21,6 +21,15 @@ struct SettingsView: View {
                         Toggle(isOn: $notificationsEnabled, label: {
                             Text("Notifications")
                         })
+                        .onChange(of: notificationsEnabled) { enabled in
+                            if enabled {
+                                NotificationManager.instance.scheduleNotification()
+                                print("Notifications scheduled")
+                            } else {
+                                NotificationManager.instance.cancelNotification()
+                                print("Notifications canceled")
+                            }
+                        }
                         
                         Toggle(isOn: $themeManager.isDarkMode, label: {
                             Text("Dark mode")
@@ -34,6 +43,14 @@ struct SettingsView: View {
         }
         .overlay(Navigation_bar_View(selectedTab: $selectedTab))
         .environment(\.colorScheme, themeManager.isDarkMode ? .dark : .light)
+        .onAppear {
+            // Load the state of notificationsEnabled from UserDefaults
+            notificationsEnabled = UserDefaults.standard.bool(forKey: "notificationsEnabled")
+        }
+        .onDisappear {
+            // Save the state of notificationsEnabled to UserDefaults
+            UserDefaults.standard.set(notificationsEnabled, forKey: "notificationsEnabled")
+        }
     }
 }
 
