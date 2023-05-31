@@ -21,7 +21,6 @@ struct ExerciseView: View {
             VideoView(videoURL: exerciseContent.videoURL)
                 .padding(.bottom, -10)
     
-            
             ZStack {
                 
                 Color(red: 31/255, green: 49/255, blue: 70/255)

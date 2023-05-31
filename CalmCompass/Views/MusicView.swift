@@ -23,7 +23,7 @@ struct MusicView: View {
         case "1": //happiness
             Color(red: 199/255, green: 88/255, blue: 32/255)
         case "2": //meditation
-            Color(red: 33/255, green: 26/255, blue: 89/255)
+            Color(red: 34/255, green: 77/255, blue: 15/255)
         case "3": //stress
             Color(red: 143/255, green: 106/255, blue: 76/255)
         case "4": // sleep
@@ -101,7 +101,12 @@ struct MusicView: View {
             )
         } else if categoryID == "2" {
             // Meditation
-            AnyView(Text("hej"))
+            AnyView(
+                LottieView(loopMode: .playOnce, animationName: "medit")
+                    .scaleEffect(0.3)
+                    .padding(.bottom, 100)
+                    .frame(width: 150, height: 426)
+            )
         } else if categoryID == "3" {
             // Stress
             AnyView(
@@ -157,7 +162,7 @@ struct PlayBackControlButton: View {
 
 struct MusicView_Previews: PreviewProvider {
     static var previews: some View {
-       MusicView(title: "", contentInfo: "", categoryID: "6", musicContent: MusicContent(id: "3", title: "", imageName: "", contentInfo: "", duration: 70, musicFile: ""))
+       MusicView(title: "", contentInfo: "", categoryID: "2", musicContent: MusicContent(id: "2", title: "", imageName: "", contentInfo: "", duration: 70, musicFile: ""))
             .environmentObject(AudioManager())
         //PlayBackControlButton(action: {})
           //  .preferredColorScheme(.dark)
