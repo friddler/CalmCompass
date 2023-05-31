@@ -85,6 +85,7 @@ struct CategoryItemView: View {
             }
             
         }
+        
     }
 }
 

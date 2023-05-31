@@ -61,11 +61,14 @@ struct ArticleView: View {
             
         } else if categoryID == "2" {
             //meditation
-            AnyView(Text("hej"))
+            AnyView(LottieView(loopMode: .playOnce, animationName: "medit")
+                .scaledToFill()
+                .scaleEffect(0.5)
+                .frame(width: 40))
         } else if categoryID == "3" {
             //stress
             AnyView(
-                LottieView(loopMode: .loop, animationName: "stressnature")
+                LottieView(loopMode: .playOnce, animationName: "stressnature")
                     .scaledToFill()
                     .scaleEffect(0.5)
                     .frame(width: 40, height: 40))
@@ -73,7 +76,7 @@ struct ArticleView: View {
         } else if categoryID == "4" {
             //sleep
             AnyView(
-                LottieView(loopMode: .loop, animationName: "nightsky")
+                LottieView(loopMode: .playOnce, animationName: "nightsky")
                     .scaledToFill()
                     .scaleEffect(0.5)
                     .frame(width: 40, height: 40))
@@ -88,7 +91,7 @@ struct ArticleView: View {
         } else {
             //yoga
             AnyView(
-                LottieView(loopMode: .loop, animationName: "yogapink")
+                LottieView(loopMode: .playOnce, animationName: "yogapink")
                     .scaledToFill()
                     .frame(width: 40))
             
@@ -99,6 +102,6 @@ struct ArticleView: View {
 
 struct ArticleView_Previews: PreviewProvider {
     static var previews: some View {
-        ArticleView(title: "Hello", contentInfo: "Hello", categoryID: "1")
+        ArticleView(title: "Hello", contentInfo: "Hello", categoryID: "2")
     }
 }
