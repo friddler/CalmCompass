@@ -54,6 +54,7 @@
 		5AE6BFCA2A1CE81B0029637E /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE6BFC92A1CE81B0029637E /* NotificationView.swift */; };
 		C793CA862A1E511F000B7760 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C793CA852A1E511F000B7760 /* SettingsView.swift */; };
 		C793CAA32A24B782000B7760 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C793CAA22A24B782000B7760 /* ThemeManager.swift */; };
+		C7C4D53C2A28A9A300A0C405 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C4D53B2A28A9A300A0C405 /* InfoView.swift */; };
 		C7D0D2C92A121CA0001C2F42 /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D0D2C82A121CA0001C2F42 /* HomeScreenView.swift */; };
 		C7F513882A14E286001C1AEE /* ProfilePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F513872A14E286001C1AEE /* ProfilePageView.swift */; };
 /* End PBXBuildFile section */
@@ -121,6 +122,7 @@
 		5AE6BFC92A1CE81B0029637E /* NotificationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		C793CA852A1E511F000B7760 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		C793CAA22A24B782000B7760 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		C7C4D53B2A28A9A300A0C405 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		C7D0D2C82A121CA0001C2F42 /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		C7F513872A14E286001C1AEE /* ProfilePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -258,6 +260,7 @@
 				0E7D7B112A122E10007C7F33 /* ShowCategoryView.swift */,
 				C7F513872A14E286001C1AEE /* ProfilePageView.swift */,
 				C793CA852A1E511F000B7760 /* SettingsView.swift */,
+				C7C4D53B2A28A9A300A0C405 /* InfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 				C7F513882A14E286001C1AEE /* ProfilePageView.swift in Sources */,
 				0EC7EC322A24CCF20098F528 /* MapsView.swift in Sources */,
 				0E7D7AC62A0BADEF007C7F33 /* CalmCompassApp.swift in Sources */,
+				C7C4D53C2A28A9A300A0C405 /* InfoView.swift in Sources */,
 				C793CA862A1E511F000B7760 /* SettingsView.swift in Sources */,
 				0E7D7B122A122E10007C7F33 /* ShowCategoryView.swift in Sources */,
 				0EC7EC2C2A20D2AC0098F528 /* ArticleView.swift in Sources */,
