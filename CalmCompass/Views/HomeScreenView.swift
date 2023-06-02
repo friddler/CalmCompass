@@ -33,6 +33,20 @@ struct HomeScreenView: View {
                     .navigationBarBackButtonHidden(true)
                     .navigationBarHidden(true)
                 }
+                Button {
+                } label: {
+                    NavigationLink(destination: InfoView()) {
+                        HStack {
+                            Image(systemName: "info.circle.fill")
+                            Text("Info")
+                        }
+                    }
+                }
+                .buttonStyle(.borderedProminent)
+                .tint(.cyan)
+                .offset(x: 95, y: 80)
+                .foregroundColor(.white)
+            
             }
             .padding()
         }
