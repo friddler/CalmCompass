@@ -15,7 +15,7 @@ struct Place : Identifiable {
     var street : String
     var houseNumber : String
     var postalCode : Int
-    var City : String
+    var city : String
     var latitude : Double
     var longitude : Double
     
