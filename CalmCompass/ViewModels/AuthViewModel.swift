@@ -15,10 +15,20 @@ class AuthViewModel: ObservableObject {
     
     private var email = ""
     private var password = ""
+    @Published var isAuthenticated = false
     
     
     
     //functions for handling authentication
+    
+    func logout() {
+            do {
+                try auth.signOut()
+                // Perform any additional logout-related tasks if needed
+            } catch {
+                print("Error signing out: \(error.localizedDescription)")
+            }
+        }
     
     struct getStartedView: View {
         @State private var email = ""
@@ -180,8 +190,8 @@ class AuthViewModel: ObservableObject {
             .background( NavigationLink(destination: HomeScreenView(), isActive: $navigateToHome) {
                 EmptyView()
             }
-                .navigationBarHidden(true)
-                    .navigationBarBackButtonHidden(true))
+                .navigationBarHidden(false)// possible to hide bar but navigation wise it is more handy to at least go back with just the blue arrow
+                    .navigationBarBackButtonHidden(false))
         }
     }
     

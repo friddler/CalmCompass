@@ -9,6 +9,7 @@ import SwiftUI
 import Firebase
 
 struct ContentView: View {
+    @EnvironmentObject var auth: AuthViewModel
     var body: some View {
         NavigationView{
             //            if userIsLoggedIn {

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 enum Tab: String, CaseIterable {
     case house
@@ -20,6 +21,7 @@ struct Navigation_bar_View: View {
     
     @Binding var selectedTab: Tab
     @State var isActive = false
+    @StateObject private var auth = AuthViewModel()
     
     private var fillImage: String {
         selectedTab.rawValue + ".fill"
@@ -81,7 +83,8 @@ struct Navigation_bar_View: View {
         case .map:
             return AnyView(MapsView())
         case .rectanglePortraitAndArrowForward:
-            return AnyView(Text("h"))
+            auth.logout()
+            return AnyView(ContentView())
         }
     }
 }
