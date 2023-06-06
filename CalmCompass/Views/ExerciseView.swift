@@ -30,6 +30,7 @@ struct ExerciseView: View {
                     
                     VStack(alignment: .leading, spacing: 8){
                         Text("Exercise")
+                            .font(.custom("Merriweather-Regular", size: 15))
                         
                     }
                     .font(.subheadline)
@@ -37,10 +38,12 @@ struct ExerciseView: View {
                     .opacity(0.7)
                     
                     Text(title)
-                        .font(.title)
+                        .font(.custom("Merriweather-Bold", size: 20))
+                        
                     
                     
                     Text(contentInfo)
+                        .font(.custom("Merriweather-Light", size: 16))
                     
                     Spacer()
                     

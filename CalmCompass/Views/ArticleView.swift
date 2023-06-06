@@ -23,11 +23,11 @@ struct ArticleView: View {
             ScrollView {
                 VStack(alignment: .center, spacing: 10) {
                     Text(title)
-                        .font(.title)
+                        .font(.custom("Merriweather-Bold", size: 24))
                         .padding(.top, 20)
                 
                     Text(contentInfo)
-                        .font(.body)
+                        .font(.custom("Merriweather-Regular", size: 17))
                         .padding()
                         
                 }
@@ -64,7 +64,7 @@ struct ArticleView: View {
             AnyView(LottieView(loopMode: .playOnce, animationName: "medit")
                 .scaledToFill()
                 .scaleEffect(0.5)
-                .frame(width: 40))
+                .frame(width: 40, height: 40))
         } else if categoryID == "3" {
             //stress
             AnyView(

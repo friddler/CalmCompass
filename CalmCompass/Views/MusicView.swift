@@ -51,15 +51,17 @@ struct MusicView: View {
                     
                     VStack(alignment: .leading, spacing: 8){
                         Text("Music")
+                            .font(.custom("Merriweather-Light", size: 15))
                         
                         Text(DateComponentsFormatter.abbreviated.string(from: musicContent.duration) ?? musicContent.duration.formatted() + "S")
+                            .font(.custom("Merriweather-Light", size: 15))
                     }
                     .font(.subheadline)
                     .textCase(.uppercase)
                     .opacity(0.7)
                     
                     Text(title)
-                        .font(.title)
+                        .font(.custom("Merriweather-Bold", size: 28))
                     
                     Button {
                         showPlayer = true
@@ -75,6 +77,7 @@ struct MusicView: View {
                     
                     
                     Text(contentInfo)
+                        .font(.custom("Merriweather-Light", size: 17))
                     
                     Spacer()
                     

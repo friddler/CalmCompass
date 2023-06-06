@@ -26,7 +26,7 @@ struct PlayerView : View {
                 .resizable()
                 .scaledToFill()
                 .blur(radius: 5)
-                .opacity(0.8)
+                .opacity(0.9)
                 .frame(width: UIScreen.main.bounds.width)
                 .ignoresSafeArea()
             
@@ -47,7 +47,7 @@ struct PlayerView : View {
                 }
                 
                 Text(musicContent.title)
-                    .font(.title)
+                    .font(.custom("Merriweather-Bold", size: 24))
                     .foregroundColor(.white)
                 
                 Spacer()

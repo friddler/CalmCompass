@@ -48,7 +48,7 @@ struct CategoryRowView: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text(title)
-                .font(.title2)
+                .font(.custom("Merriweather-Bold", size: 25))
                 .padding(.leading, 10)
             
             ScrollView(.horizontal) {
@@ -78,9 +78,8 @@ struct CategoryItemView: View {
                     .cornerRadius(10)
                 
                 Text(content.title)
-                    .font(.subheadline)
+                    .font(.custom("Merriweather-Regular", size: 15))
                     .multilineTextAlignment(.center)
-                    .lineLimit(2)
                     .foregroundColor(Color.black)
             }
             
