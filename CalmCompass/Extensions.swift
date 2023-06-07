@@ -7,7 +7,7 @@
 
 import Foundation
 
-//lazy initialization, it will not be initialized until used.
+//lazy initialization, it will not be initialized until used. This extension can be reused and we can also customize it if we want to display the time differently.
 
 extension DateComponentsFormatter {
     static let abbreviated: DateComponentsFormatter = {
@@ -18,6 +18,10 @@ extension DateComponentsFormatter {
         formatter.unitsStyle = .abbreviated
         
         return formatter
+        
+        /* this formatter shortens the time intervals by displaying units.
+         We are using this because we want to display concise representation of time.
+         */
     }()
     
     static let positional: DateComponentsFormatter = {
@@ -29,5 +33,9 @@ extension DateComponentsFormatter {
         formatter.zeroFormattingBehavior = .pad
         
         return formatter
+        
+        /*
+         This created a formatted for displaying time intervals in minutes and seconds.
+         */
     }()
 }

@@ -7,6 +7,12 @@
 
 import Foundation
 
+/*
+ THe protocol defines a set of properties that all content types must have.
+ The 'get' ensures that any type that follows to the protocol must have a way to access the values.
+ But they can't be modified.
+ */
+
 protocol Content {
     var id: String { get }
     var title: String { get }

@@ -10,10 +10,11 @@ import SwiftUI
 struct ShowCategoryView: View {
     
     let category: Category
+    @EnvironmentObject var firestoreViewModel: FirestoreViewModel
     
     var body: some View {
         VStack {
-            Image(category.imageName)
+            Image(category.categoryImage)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(height: 270)
@@ -33,6 +34,7 @@ struct ShowCategoryView: View {
         }
         .edgesIgnoringSafeArea(.all)
         .background(Image("bgtest"))
+        
         
     }
     
@@ -95,7 +97,7 @@ struct ShowCategoryView_Previews: PreviewProvider {
         let exampleCategory = Category(
             id: "1",
             title: "Example Category",
-            imageName: "exampleImage",
+            imageName: "exampleImage", categoryImage: "",
             articleContent: [
                 ArticleContent(id: "1", title: "Example article happiness", imageName: "SleepLogo", contentInfo: "Article 1 Info"),
                 ArticleContent(id: "2", title: "Example Article 2", imageName: "SleepLogo", contentInfo: "Article 2 Info")

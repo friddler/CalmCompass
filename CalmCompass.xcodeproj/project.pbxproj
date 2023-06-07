@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E3D32022A13757E00C9546D /* CategoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3D32012A13757E00C9546D /* CategoryData.swift */; };
+		0E3D32022A13757E00C9546D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3D32012A13757E00C9546D /* Category.swift */; };
 		0E4065FE2A1E305000184814 /* MusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4065FD2A1E305000184814 /* MusicView.swift */; };
 		0E7D7AC62A0BADEF007C7F33 /* CalmCompassApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7D7AC52A0BADEF007C7F33 /* CalmCompassApp.swift */; };
 		0E7D7AC82A0BADEF007C7F33 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7D7AC72A0BADEF007C7F33 /* ContentView.swift */; };
@@ -77,7 +77,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0E3D32012A13757E00C9546D /* CategoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryData.swift; sourceTree = "<group>"; };
+		0E3D32012A13757E00C9546D /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		0E4065FD2A1E305000184814 /* MusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicView.swift; sourceTree = "<group>"; };
 		0E7D7AC22A0BADEF007C7F33 /* CalmCompass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalmCompass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E7D7AC52A0BADEF007C7F33 /* CalmCompassApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalmCompassApp.swift; sourceTree = "<group>"; };
@@ -161,7 +161,7 @@
 		0E3D32002A13755500C9546D /* DataModels */ = {
 			isa = PBXGroup;
 			children = (
-				0E3D32012A13757E00C9546D /* CategoryData.swift */,
+				0E3D32012A13757E00C9546D /* Category.swift */,
 				0EC7EC332A24CD120098F528 /* Place.swift */,
 				0ECBF93C2A1B573400B9EEBB /* Content.swift */,
 			);
@@ -469,7 +469,7 @@
 				C793CA862A1E511F000B7760 /* SettingsView.swift in Sources */,
 				0E7D7B122A122E10007C7F33 /* ShowCategoryView.swift in Sources */,
 				0EC7EC2C2A20D2AC0098F528 /* ArticleView.swift in Sources */,
-				0E3D32022A13757E00C9546D /* CategoryData.swift in Sources */,
+				0E3D32022A13757E00C9546D /* Category.swift in Sources */,
 				0EC7EC2E2A20D8520098F528 /* PlayerView.swift in Sources */,
 				0ECBF93D2A1B573400B9EEBB /* Content.swift in Sources */,
 				5AE6BFCA2A1CE81B0029637E /* NotificationView.swift in Sources */,
