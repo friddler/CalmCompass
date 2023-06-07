@@ -7,15 +7,16 @@
 import SwiftUI
 
 struct HomeScreenView: View {
+    
     @EnvironmentObject var themeManager: ThemeManager
-    let categories: [Category] = Category.categories
+    @EnvironmentObject var firestoreViewModel: FirestoreViewModel
     let columns = [GridItem(.adaptive(minimum: 170))]
     @State private var selectedTab: Tab = .house
     
     var body: some View {
         ScrollView {
             LazyVGrid(columns: columns, spacing: 10) {
-                ForEach(categories, id: \.id) { category in
+                ForEach(firestoreViewModel.categories, id: \.id) { category in
                     NavigationLink(destination: ShowCategoryView(category: category)) {
                         ZStack {
                             Rectangle()
@@ -46,23 +47,25 @@ struct HomeScreenView: View {
                 .tint(.cyan)
                 .offset(x: 95, y: 80)
                 .foregroundColor(.white)
-            
+                
             }
             .padding()
         }
         .overlay(Navigation_bar_View(selectedTab: $selectedTab))
         .onAppear {
             themeManager.handleTheme()
+            firestoreViewModel.fetchCategoriesFromFirestore()
         }
         .environment(\.colorScheme, themeManager.isDarkMode ? .dark : .light)
         .background(Image("bgtest"))
     }
 }
-    
-    struct HomeScreenView_Previews: PreviewProvider {
-        static var previews: some View {
-            HomeScreenView()
-                .environmentObject(ThemeManager.shared)
-        }
+
+struct HomeScreenView_Previews: PreviewProvider {
+    static var previews: some View {
+        HomeScreenView()
+            .environmentObject(ThemeManager.shared)
+            .environmentObject(FirestoreViewModel())
     }
-    
+}
+

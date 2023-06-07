@@ -45,6 +45,7 @@ struct MapsView: View {
                 }
             }
         }
+        .ignoresSafeArea(.all)
         .sheet(item: $selectedPlace) { place in
             PlaceDetailView(selectedPlace: $selectedPlace, place: place)
                 .background(Color.clear)

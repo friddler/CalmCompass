@@ -22,6 +22,7 @@ struct CalmCompassApp: App {
     
     @StateObject var audioManager = AudioManager()
     @StateObject var themeManager = ThemeManager.shared
+    @StateObject var firestoreViewModel = FirestoreViewModel()
     
     init(){
         FirebaseApp.configure()
@@ -32,6 +33,8 @@ struct CalmCompassApp: App {
             ContentView()
                 .environmentObject(audioManager)
                 .environmentObject(themeManager)
+                .environmentObject(firestoreViewModel)
+                
         }
     }
 }
