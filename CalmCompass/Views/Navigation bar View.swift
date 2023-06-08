@@ -9,9 +9,9 @@ import SwiftUI
 import Firebase
 
 enum Tab: String, CaseIterable {
-    case house
-    case person
     case gearshape
+    case person
+    case house
     case map
     case rectanglePortraitAndArrowForward = "rectangle.portrait.and.arrow.forward"}
 
@@ -30,12 +30,12 @@ struct Navigation_bar_View: View {
     
     private var tabColor: Color {
         switch selectedTab {
-        case .house:
-            return Color.blue
-        case .person:
-            return Color.orange
         case .gearshape:
             return Color.purple
+        case .person:
+            return Color.orange
+        case .house:
+            return Color.blue
         case .map:
             return Color.green
         case .rectanglePortraitAndArrowForward:
